@@ -38,14 +38,14 @@
 				<!--	<li><a href="#changeAnimation" style="color:#ff0039">How to change Animation</a></li>-->
 					<li><a href="#packagename" style="color:#ff0039">How to change Packagename</a></li>
 					<li><a href="#assetimage" style="color:#ff0039">How to Change Images in asset</a></li>
-					<li><a href="#expImg" style="color:#ff0039">How to Fit xy(fill) product image in box</a></li>
+				<!--	<li><a href="#expImg" style="color:#ff0039">How to Fit xy(fill) product image in box</a></li> -->
 					<li><a href="#language" style="color:#ff0039">How to Change language String value</a></li>
 					<li><a href="#addlanguage" style="color:#ff0039">How to Add/Remove language</a></li>
 					<li><a href="#applanguage" style="color:#ff0039">How to change default language of app</a></li>
 					<li><a href="#theme" style="color:#ff0039">How to Remove Dark Theme</a></li>
-					<li><a href="#font" style="color:#ff0039">How to Change App font</a></li>
+			<!--		<li><a href="#font" style="color:#ff0039">How to Change App font</a></li>
 					<li><a href="#serverurl" style="color:#ff0039">How to Change Server URL</a></li>
-					<li><a href="#jwt" style="color:#ff0039">How to Change JWT Key</a></li>
+					<li><a href="#jwt" style="color:#ff0039">How to Change JWT Key</a></li> -->
 
 
 					<li><a href='#create_fcm' style="color:#ff0039">How to create Firebase Project for android and
@@ -54,24 +54,25 @@
 
 					<li><a href='#firebase_otp' style="color:#ff0039">How to Enable Firebase Phone
 							Authentication(OTP).</a></li>
-					<li><a href='#otp' style="color:#ff0039">How to Change default country code for OTP.</a></li>
+					<!-- <li><a href='#otp' style="color:#ff0039">How to Change default country code for OTP.</a></li>
 
 					<li><a href='#fcm' style="color:#ff0039">How to set Notification</a></li>
 					<li><a href='#link' style="color:#ff0039">How to Create Dynamic Link Using Firebase for Share
-							product</a></li>
+							product</a></li> -->
 					<li><a href="#map1" style="color:#ff0039">How to Add Map API key for Address</a></li>
+					<!--
 					<li><a href='#payu' style="color:#ff0039">How to Manage payment gatway and add Credential in admin
-							panel</a></li>
+							panel</a></li>-->
 					<!-- <li><a href='#map' style="color:#ff0039">Enable Map SDK From Cloud Plateform.</a></li> -->
 					<li><a href='#cloud' style="color:#ff0039">Enable CloudKit for multiple file select in ios.</a></li>
 
-
+<!--
 					<li><a href='#timeslot' style="color:#ff0039">How to Manage preferred delivery date/time</a></li>
 					<li><a href='#currency' style="color:#ff0039">How to set Currency code for Application</a></li>
 
 					<li><a href='#limit' style="color:#ff0039">How Increase Product Load Limit</a></li>
 					<li><a href='#api' style="color:#ff0039">How Change Api parameter</a></li>
-					<li><a href='#privacy' style="color:#ff0039">Get Privacy-Policy URL for PlayStore.</a></li>
+					<li><a href='#privacy' style="color:#ff0039">Get Privacy-Policy URL for PlayStore.</a></li> -->
 					<li><a href='#apk' style="color:#ff0039">How to Generate Release APK</a></li>
 					<li><a href='#apk-iOS' style="color:#ff0039">How to Publish iOS App to App Store</a></li>
 
@@ -485,13 +486,13 @@
 								
 
 
-									<li>For ios open ios > Runner > info.plist > there is the key CFBundleIdentifier
+								<!--	<li>For ios open ios > Runner > info.plist > there is the key CFBundleIdentifier
 										change the string value for that as shown in below</li><br>
 									<img src="images/packagename_6.png" alt="eDemand" />
 									<br><br>
 									<li>lib\Helper\Constant.dart </li><br>
 									
-									<img src="images/packagename_7.png" alt="eDemand" />
+									<img src="images/packagename_7.png" alt="eDemand" /> -->
 								</ol>
 								<div class="section_bdr"></div>
 								</ul>
@@ -516,7 +517,7 @@
 								</ul>
 							</div>
 						</section>
-
+<!--
 						<section id="expImg">
 							<div class="container"> <br>
 								<h2>How to Fit xy(fill) product image in box</h2>
@@ -537,7 +538,7 @@
 								</ul>
 							</div>
 						</section>
-
+-->
 
 						<section id="language">
 							<div class="container"> <br>
@@ -576,12 +577,18 @@
 											missing in any file then when you change that language then it will give you
 											error. so add all string in all json file.</li>
 
-										<br>
+										<br>	<br>
 
 										<img src="images/lan2.png" alt="eDemand" />
+										<br>
+										<li>Add your language name, language code and language image in belo list</li>
+
+									
+
+										<img src="images/language.png" alt="eDemand" />
 										<br><br>
 
-										<li>now search in whole project "en", by pressing ctrl shift f. now where you
+									<!--	<li>now search in whole project "en", by pressing ctrl shift f. now where you
 											see languge code in list add your new lanaguge code there.</li>
 										<br> <img src="images/lang1.png" alt="eDemand" />
 										<br><br>
@@ -600,13 +607,12 @@
 										<img src="images/lang3.png" alt="eDemand" />
 										<br><br>
 
-									</ul>
+									</ul>-->
 
 									<li> To remove language</li>
 									<ul>
-										<li>now search in whole project "en", by pressing ctrl shift f. now where you
-											see languge code in list remove lanaguge code that you don't want.</li>
-										<br> <img src="images/lang1.png" alt="eDemand" />
+										<li>Remove language from below list</li>
+										<br> <img src="images/language.png" alt="eDemand" />
 										<br><br>
 									</ul>
 								</ol>
@@ -623,7 +629,7 @@
 								<h2>How to change default language of app</h2>
 								<ol>
 
-									<li>Go to lib > Helper > constant.dart inside that defaultLanguage variable is availble. here you
+									<li>Go to lib/utils/constant.dart inside that defaultLanguageCode variable is availble. here you
 										have to change default language code "en" to your language code. 
 									</li><br>
 
@@ -639,7 +645,7 @@
 
 
 
-
+<!--
 
 						<section id="theme">
 							<div class="container"> <br>
@@ -664,7 +670,8 @@
 								</ul>
 							</div>
 						</section>
-
+-->
+<!--
 						<section id="font">
 							<div class="container"> <br>
 								<h2>How to Change App font</h2>
@@ -740,7 +747,7 @@
 						</section>
 
 
-
+-->
 
 						<section id="create_fcm">
 							<div class="container"> <br>
@@ -881,7 +888,7 @@
 
 
 
-
+<!--
 						<section id="otp">
 							<div class="container">
 								<h2>How to Change default country code for OTP.</h2>
@@ -1102,7 +1109,7 @@
 								</ul>
 							</div>
 						</section>
-
+-->
 						<section id="map1">
 							<div class="container"> <br>
 								<h2>How to Add Map API key for Address</h2>
@@ -1199,7 +1206,7 @@ android:value="{{YOUR_API_KEY_HERE}}" /></xmp>
 
 							</div>
 						</section>
-
+<!--
 						<section id="payu">
 							<div class="container">
 								<h2>How to manage payment gatway and add Credential in admin panel</h2>
@@ -1214,7 +1221,7 @@ android:value="{{YOUR_API_KEY_HERE}}" /></xmp>
 								</ol>
 							</div>
 						</section>
-
+-->
 						<!-- <section id="map">
 							<div class="container">
 
@@ -1257,7 +1264,7 @@ android:value="{{YOUR_API_KEY_HERE}}" /></xmp>
 							</div>
 						</section>
 
-
+<!--
 						<section id="timeslot">
 							<div class="container">
 								<h2>How to manage preferred delivery date/time</h2>
@@ -1325,7 +1332,7 @@ android:value="{{YOUR_API_KEY_HERE}}" /></xmp>
 						</section>
 
 
-
+-->
 
 						<section id="apk">
 							<div class="container">
