@@ -2021,7 +2021,7 @@ input[type="submit"].disabled, input[type="submit"]:disabled,  input[type="reset
 /* One */
 
 #one:before {
-	/*background-image: url("../../images/banner.png");
+	/*background-image: url("../../images/banner.webp");
 	background-position: top left;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -2072,7 +2072,7 @@ input[type="submit"].disabled, input[type="submit"]:disabled,  input[type="reset
 	margin: 0px 0 5px 0;
 }
 .scrollup {
-  background: url("../../images/top-move.png") no-repeat scroll 0 0;
+  background: url("../../images/top-move.webp") no-repeat scroll 0 0;
   bottom: 35px;
   display: block;
   height: 40px;
