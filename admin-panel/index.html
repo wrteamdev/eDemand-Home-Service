@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>eDemand Documentation</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="eDemand Documentation">
+    <meta name="author" content="eDemand Documentation">
+    <link rel="shortcut icon" href="assets/images/logo-eDemand.svg">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    <style>
+        .image-doc {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+        }
+
+        .twenty {
+            height: 20px;
+        }
+
+        .title-img {
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body class="docs-page">
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="#section-1"><img class="logo-icon me-2"
+                                src="assets/images/logo-eDemand.svg" alt="logo"><span class="logo-text"><span
+                                    class="text-alt">Docs</span></span></a>
+                    </div>
+
+                </div>
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">&nbsp; What is
+                            eDemand?</a>
+                    </li>
+
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2">
+                            <span class="theme-icon-holder me-2"><i
+                                    class="fas fa-arrow-down"></i></span>Installation</a>
+                    </li>
+
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Configure
+                            eDemand</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1"><i class="fas fa-cog"></i> &nbsp;
+                            General Settings</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-8"><i class="fas fa-cog"></i>
+                            &nbsp;Google Map Key Settings </a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2"><i class="fas fa-envelope"></i>
+                            &nbsp; Email</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-3"><i class="far fa-hand-paper"></i>
+                            &nbsp; Terms and Conditions</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-4"><i
+                                class="fas fa-user-secret"></i>
+                            &nbsp; Privacy Policy</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-5"><i
+                                class="fas fa-money-bill-wave"></i> &nbsp;
+                            Refund Policy</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-6"><i
+                                class="fas fa-address-card"></i>
+                            &nbsp; About us</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-laptop-code"></i></span>Tabs</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1"><i class="fas fa-home"></i>
+                            &nbsp; Home</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2"><i class="fas fa-handshake"></i>
+                            &nbsp; Partners</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-9"><i
+                                class="fa fa-shopping-cart"></i>
+                            &nbsp; Orders</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-10"><i class="fas fa-list-alt"></i>
+                            &nbsp; Categories</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3"><i class="fas fa-tools"></i>
+                            &nbsp;Services</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-6"><i
+                                class="fas fa-file-invoice-dollar"></i> &nbsp;
+                            Transactions</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-7"><i
+                                class="fas fa-puzzle-piece"></i>
+                            &nbsp;
+                            Promocodes</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-11"><i class="fas fa-list-alt"></i>
+                            &nbsp;
+                            Featured Section</a></li>
+
+                </ul>
+
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Introduction
+                        </h1>
+                        <section class="docs-intro">
+                            <p>
+                                eDemand lets you create a marketplace for the various service providers/partners around
+                                the city who can provide their customers with direct home & doorstep services.
+                            </p>
+                        </section>
+                        <!--//docs-intro-->
+                    </header>
+                    <section class="docs-section" id="item-1-1">
+
+                        <h2 class="section-heading">What is eDemand?</h2>
+                        <p> eDemand is best suitable for the majority of service types like House Keeping, Beauty &
+                            Salon, Electricians, Plumbing, Painting, Renovations, Mechanics, and much more.
+                            Ultimately, It is a smart solution for sophisticated businesses like Services on Demand at
+                            Home / Doorstep
+
+                        </p>
+                        <p>
+                        <h2 class="section-heading">What eDemand offers you?</h2>
+
+                        <li class="nav-item"></i> &nbsp;
+                            Multi-Provider: Multi-Vendor system for Providers / Partners with an option to register as
+                            an Individual or Organization</a></li>
+                        <li class="nav-item"></i> &nbsp;
+                            Multi-Cities: To Run your business in Multiple Cities flawlessly.
+                            </a></li>
+                        <li class="nav-item"></i> &nbsp;
+                            Advanced Search Options: Geolocation-based Service or Provider/Partner searching
+                            functionality.
+                            </a></li>
+                    </section>
+                    <!--//section-->
+
+
+                </article>
+
+                <article class="docs-article" id="section-2">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Installation</h1>
+                        <section class="docs-intro">
+                            <p>
+                            <ol>
+                                <li>
+                                    Login into you cPanel.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/cp-1.png">
+
+                                        <img src="assets/images/cp-1.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Go to database in your cPanel
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/cp-2.png">
+
+                                        <img src="assets/images/cp-2.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Enter database name and Create a new
+                                    database.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/cp-3.png">
+
+                                        <img src="assets/images/cp-3.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Create Database user.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/cp-4.png">
+
+                                        <img src="assets/images/cp-4.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Assign Database to the user.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/cp-5.png">
+
+                                        <img src="assets/images/cp-5.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Open File manager now.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/cp-6.png">
+
+                                        <img src="assets/images/cp-6.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Go to public_html or
+                                    public_html/youreDemand.in folder in the
+                                    file manager, whichever folder your
+                                    domain points to.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/cp-7.png">
+
+                                        <img src="assets/images/cp-7.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Upload the downloaded zip in public_html
+                                    or public_html/youreDemand.in folder.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/cp-8.png">
+                                        <img src="assets/images/cp-8.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    unzip or extract the <b>Code vX.X -
+                                        upload this on server.zip</b> file
+                                    that you have just uploaded.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/cp-9.png">
+                                        <img src="assets/images/cp-9.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    verify that all these files are in
+                                    public_html or
+                                    public_html/youreDemand.in folder.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/cp-10.png">
+                                        <img src="assets/images/cp-10.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    visit http://youreDemand.in/install
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/install.png">
+                                        <img src="assets/images/install.png" class="image-doc">
+                                    </a>
+                                </div>
+                                </p>
+                            </ol>
+                            <p> After following the above steps you have
+                                successfully created a Database, User for the
+                                Database, and uploaded Ready to Install files.
+                                Kindly gather that database information and fill
+                                in the form as suggested.
+                            <ol>
+                                <li>
+                                    Database Hostname : Enter the hostname.
+                                </li>
+                                <li>
+                                    Database Username : Enter the username
+                                    that have access to the database.
+                                </li>
+                                <li>
+                                    Database Password : Enter the password.
+                                </li>
+                                <li>
+                                    Database Name : Enter the name of
+                                    database.
+                                </li>
+                                <li>
+                                    Admin Mobile : Enter the mobile number
+                                    (The mobile number will be used further
+                                    for
+                                    user authentication)
+                                </li>
+                                <li>
+                                    Admin Password : Enter the password
+                                    number(The password will be used further
+                                    for
+                                    user authentication)
+                                </li>
+                            </ol>
+                            </p>
+                            <p>
+                                Now click Install. Thats it! You are ready to
+                                run your App :
+                                http://youreDemand.in/
+                            </p>
+                        </section>
+                        <!--//docs-intro-->
+                    </header>
+                </article>
+                <!--//docs-article-->
+
+                <!--//docs-article-->
+
+                <article class="docs-article" id="section-5">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Configure eDemand</h1>
+                        <section class="docs-intro">
+                            <div class="callout-block callout-block-info">
+
+                                <div class="content">
+                                    <h4 class="callout-title">
+                                        <span class="callout-icon-holder me-1">
+                                            <svg class="svg-inline--fa fa-info-circle fa-w-16" aria-hidden="true"
+                                                focusable="false" data-prefix="fas" data-icon="info-circle" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
+
+                                        </span>
+                                        <!--//icon-holder-->
+                                        Note
+                                    </h4>
+                                    <p>In order to Configure eDemand you must
+                                        have Admin Account.</p>
+                                </div>
+                                <!--//content-->
+                            </div>
+                            <p>
+                                Use the given guide to configure and customize
+                                eDemand as you need.
+
+                            </p>
+                            <p>
+                                Login as admin by
+                            </p>
+                            <ol>
+                                <li>Enter Admin Login id and Password. Click
+                                    Login</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/set-2.png">
+                                        <img src="assets/images/set-2.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Great! You have logged in as Admin.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/set-3.png">
+                                        <img src="assets/images/set-3.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>
+                                    Follow the steps given below to customize
+                                    eDemand.
+                                </li>
+                            </ol>
+
+                        </section>
+                        <!--//docs-intro-->
+                    </header>
+                    <section class="docs-section" id="item-5-1">
+                        <h2 class="section-heading">General Settings</h2>
+                        <p>
+                            All the General Settings like Company Title, Support
+                            Name, Support Email, favicon, Half
+                            Logo, Currency Symbol, TimeZone, Phone, Site Colors,
+                            Address, Description, Copyright
+                            Details, And Support Hours.
+                            Just go to Settings -> General.
+                        </p>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/gen.png">
+                                <img src="assets/images/gen.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+                    <!--//section-->
+                    <section class="docs-section" id="item-3-8">
+                        <h2 class="section-heading">Google Map Api Keys</h2>
+                        <p>
+                        <ol>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/map.png">
+                                    <img src="assets/images/map.png" class="image-doc" alt="">
+                                </a>
+                                <li>Google Map API KEY : <a class="nav-link scrollto" href="#item-9-1"><svg
+                                            class="svg-inline--fa fa-key fa-w-16" aria-hidden="true" focusable="false"
+                                            data-prefix="fas" data-icon="key" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M512 176.001C512 273.203 433.202 352 336 352c-11.22 0-22.19-1.062-32.827-3.069l-24.012 27.014A23.999 23.999 0 0 1 261.223 384H224v40c0 13.255-10.745 24-24 24h-40v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-78.059c0-6.365 2.529-12.47 7.029-16.971l161.802-161.802C163.108 213.814 160 195.271 160 176 160 78.798 238.797.001 335.999 0 433.488-.001 512 78.511 512 176.001zM336 128c0 26.51 21.49 48 48 48s48-21.49 48-48-21.49-48-48-48-48 21.49-48 48z">
+                                            </path>
+                                        </svg><!-- <i class="fas fa-key"></i> Font Awesome fontawesome.com -->
+                                        &nbsp; Here</a>
+                                </li>
+                            </div>
+                        </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-5-2">
+                        <h2 class="section-heading">Email Settings</h2>
+                        <p>
+                            Configure Email settings.
+                            Just go to Settings -> SMTP (Email).
+                        </p>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/smtp.png">
+                                <img src="assets/images/smtp.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                        <ol>
+                            <li>Type the host name.</li>
+                            <li>Type SMTP user name. </li>
+                            <li>Type SMTP Password.</li>
+                            <li>Enter SMTP Port no.</li>
+                            <li>Select SMTP Encryption Type</li>
+                            <li>Select Mail type (HTML,TEXT)</li>
+                        </ol>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-5-3">
+                        <h2 class="section-heading">Terms And Conditions</h2>
+                        <p>
+                            Configure Terms And Conditions settings.
+                            Just go to Settings -> Terms and Conditions.
+                        </p>
+                        <ol>
+                            <li>Enter all Terms and conditions under Terms and
+                                conditions section.</li>
+                        </ol>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/t-c.png">
+                                <img src="assets/images/t-c.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="item-5-4">
+                        <h2 class="section-heading">Privacy Policy</h2>
+                        <p>
+                            Configure Privacy Policy settings.
+                            Just go to Settings -> Privacy Policy.
+                        </p>
+                        <ol>
+                            <li>Enter all Privacy Policy under Privacy Policy
+                                section.</li>
+                        </ol>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/t-c.png">
+                                <img src="assets/images/t-c.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="item-5-5">
+                        <h2 class="section-heading">Refund Policy</h2>
+                        <p>
+                            Configure Refund Policy settings.
+                            Just go to Settings -> Refund Policy.
+                        </p>
+                        <ol>
+                            <li>Enter all Refund Policy under Refund Policy
+                                section.</li>
+                        </ol>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/refund.png">
+                                <img src="assets/images/refund.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+                    <section class="docs-section" id="item-5-6">
+                        <h2 class="section-heading">About us</h2>
+                        <p>
+                            Configure About us settings.
+                            Just go to Settings -> About us.
+                        </p>
+                        <ol>
+                            <li>Enter all About us under About us section.</li>
+                        </ol>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/about.png">
+                                <img src="assets/images/about.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+                    <!--//section-->
+                </article>
+                <!--//docs-article-->
+
+                <!--//docs-article-->
+
+                <article class="docs-article" id="section-8">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Payment Gateway Settings.</h1>
+                        <section class="docs-intro">
+                            <p>
+                                Verity of options available for paymemts, just
+                                follow the below steps to configure the
+                                payment gateways for eDemand.
+                            </p>
+                        </section>
+                        <!--//docs-intro-->
+                    </header>
+                    <section class="docs-section" id="item-8-1">
+                        <h2 class="section-heading"> Stripe</h2>
+                        <p>
+                        <ol>
+                            <li>Go to <a href="https://dashboard.stripe.com/login" target="_blank">
+                                    https://dashboard.stripe.com/login</a>
+                                and sign in with your Stripe account</li>
+
+                            <li>Sign in with your account</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/stripe1.png">
+                                    <img src="assets/images/stripe1.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>Click on Developers on top right of the
+                                browser</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/stripe2.png">
+                                    <img src="assets/images/stripe2.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>Click Api keys on left Navigation bar</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/stripe3.png">
+                                    <img src="assets/images/stripe3.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>Click Reveal Key and copy Publishable key
+                                and Secret Key.</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/stripe4.png">
+                                    <img src="assets/images/stripe4.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>Paste all Stripe Credentials here. (settings
+                                -> Payment Gateway Settings)</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/stripe5.png">
+                                    <img src="assets/images/stripe5.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </ol>
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-8-2">
+                        <h2 class="section-heading"><img src="assets/images/razorpay.png" class="title-img" alt="">
+                            Razorpay</h2>
+                        <p>
+                        <ol>
+                            <li>Go to <a href="https://dashboard.razorpay.com/app/dashboard" target="_blank">
+                                    https://dashboard.razorpay.com/</a>
+                                and sign in with your Razorpay account</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/rp.png">
+                                    <img src="assets/images/rp.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>Click Settings</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/rp1.png">
+                                    <img src="assets/images/rp1.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>Click Api keys</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/rp2.png">
+                                    <img src="assets/images/rp2.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>Genetare new key or regenerate key and copy
+                                it.</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/rp3.png">
+                                    <img src="assets/images/rp3.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+
+
+                            <li>Paste all Razorpay Credentials here.
+                                (settings -> Payment Gateway Settings)</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/.png">
+                                    <img src="assets/images/rp4.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </ol>
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-8-3">
+                        <h2 class="section-heading"> <img src="assets/images/paystack.png" class="title-img" alt="">
+                            Paystack</h2>
+                        <p>
+                        <ol>
+                            <li>Go to <a href="https://dashboard.paystack.com/" target="_blank">
+                                    https://dashboard.paystack.com/</a>
+                                and sign in with your Paystack account</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/ps.png">
+                                    <img src="assets/images/ps.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>Click settings and click API Keys & Webhooks
+                            </li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/ps1.png">
+                                    <img src="assets/images/ps1.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>Copy Credentials</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/ps2.png">
+                                    <img src="assets/images/ps2.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+
+
+
+                            <li>Paste all Paystack Credentials here.
+                                (settings -> Payment Gateway Settings)</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/ps3.png">
+                                    <img src="assets/images/ps3.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </ol>
+                        </p>
+                    </section>
+                    <!--//section-->
+                </article>
+                <article class="docs-article" id="section-6">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Tabs</h1>
+                        <section class="docs-intro">
+                            <p>Informations about all tabs in eDemand</p>
+                        </section>
+                        <!--//docs-intro-->
+                    </header>
+                    <section class="docs-section" id="item-3-1">
+                        <h2 class="section-heading">Home</h2>
+                        <p>
+                        <ol>
+                            <li>Dashboard of the app to view app insights.
+                            </li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/tab1.png">
+                                    <img src="assets/images/tab1.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </ol>
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-3-2">
+                        <h2 class="section-heading">Partners</h2>
+                        <p>
+                        <ol>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/tab2.png">
+                                    <img src="assets/images/tab2.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-9">
+                        <h2 class="section-heading">Orders</h2>
+                        <p>
+                        <ol>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/ordres.png">
+                                    <img src="assets/images/ordres.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-10">
+                        <h2 class="section-heading">Categories</h2>
+                        <p>
+                        <ol>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/categories.png">
+                                    <img src="assets/images/categories.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-11">
+                        <h2 class="section-heading">Categories</h2>
+                        <p>
+                        <ol>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/section.png">
+                                    <img src="assets/images/section.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </ol>
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-3-3">
+                        <h2 class="section-heading">Services</h2>
+                        <p>You can Servives under Servives section.</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/tab3.png">
+                                <img src="assets/images/tab3.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-4">
+                        <h2 class="section-heading">Services</h2>
+                        <p>
+                        <ol>
+                            <li>View available Services under All Services
+                                section.</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/services.png">
+                                    <img src="assets/images/services.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-6">
+                        <h2 class="section-heading">Transactions</h2>
+                        <p>
+                        <ol>
+                            <li>See all the transactions done by users under
+                                Customers -> Transaction Sections.</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/tab8.png">
+                                    <img src="assets/images/tab8.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-7">
+                        <h2 class="section-heading">Promocodes</h2>
+                        <p>
+                        <ol>
+                            <li>See all the Promocodes</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/promo-codes.png">
+                                    <img src="assets/images/promo-codes.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </ol>
+                        </p>
+                    </section>
+
+                    <!--//section-->
+                    <section class="docs-section" id="item-9-1">
+                        <h2 class="section-heading">Configure Google API KEY</h2>
+                        <ol>
+                            <div class="callout-block callout-block-info">
+                                <div class="content">
+                                    <h4 class="callout-title">
+                                        <span class="callout-icon-holder me-1">
+                                            <svg class="svg-inline--fa fa-info-circle fa-w-16" aria-hidden="true"
+                                                focusable="false" data-prefix="fas" data-icon="info-circle" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
+
+                                        </span>
+                                        Note
+                                    </h4>
+                                    <p><strong>You need to enable the billing to make work of map on admin panel. If its
+                                            not dispalying the map thn you had miss some step on google console so
+                                            please do proper setup for key. </strong></p>
+
+                                </div>
+                            </div>
+                            <div class="callout-block callout-block-info">
+                                <div class="content">
+                                    <h4 class="callout-title">
+                                        <span class="callout-icon-holder me-1">
+                                            <svg class="svg-inline--fa fa-info-circle fa-w-16" aria-hidden="true"
+                                                focusable="false" data-prefix="fas" data-icon="info-circle" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
+
+                                        </span>
+                                        Note
+                                    </h4>
+                                    <p>If map is not dispalying then it is your responsibiliy to do proper things. </p>
+                                    <br>
+                                    <p><strong>Installation and map setup is out of the scope.Please note it
+                                            down.</strong></p>
+
+                                </div>
+                            </div>
+                            <li>First step is to go to google developer console and follow this offical documentation of
+                                google. </li>
+                            <li>While following this Offical Documentation there you need to enable two APIs You need to
+                                enable <p class="text text-primary"> 1) Places,
+                                    2)distanceMatrix 3)Javascript Map API </p> these APIs</li>
+                            <p> <a href="https://developers.google.com/maps/documentation/javascript/cloud-setup"
+                                    target="_BLANK">Offical Documentation for creating API key</a> </p>
+                            <li>Usage of Google Map API Key:</li>
+                            <ul>
+                                <li>While adding or registering the partner we need to add location from
+                                    map.</li>
+                            </ul>
+                            <li>Now, we need to restrict the APIs key for security purpose.For that you need to folow
+                                this official documentation from google
+                                <a href="https://developers.google.com/maps/documentation/maps-static/get-api-key#restrict_key"
+                                    target="_BLANK">Restrict API KEY</a></p>
+                            </li>
+                            <div class="callout-block callout-block-danger">
+                                <div class="content">
+                                    <h4 class="callout-title">
+                                        <span class="callout-icon-holder me-1">
+                                            <svg class="svg-inline--fa fa-info-circle fa-w-16" aria-hidden="true"
+                                                focusable="false" data-prefix="fas" data-icon="info-circle" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
+
+                                        </span>
+                                        Note
+                                    </h4>
+                                    <p>After creating the GOOGLE API KEY for map and other work.Please do Restriction on
+                                        that APi key by following the documentation provided by google.
+                                    </p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Visit this documentation for enable or disable the APIs <a
+                                        href="https://support.google.com/googleapi/answer/6158841?hl=en"
+                                        target="_BLANK">Here</a></li>
+                                <li>Visit this documentation for API Restricting for security. <a
+                                        href="https://developers.google.com/maps/documentation/maps-static/get-api-key#restrict_key"
+                                        target="_BLANK">Here</a></li>
+                                <li>Then, Set created API KEY on System -> General Settings -> <strong> Google Map API
+                                        KEY</strong> </li>
+                                </li>
+                            </ul>
+                        </ol>
+                    </section>
+                </article>
+                <!--//docs-article-->
+                <footer class="footer">
+                    <div class="container text-center py-5">
+                        <small class="copyright">Made with <3 by <a href="https://infinitietech.com/" target="_blank">
+                                Infinitietech</a></small><br>
+                        <small class="copyright">Thanks to <a href="https://themes.3rdwavemedia.com/"
+                                target="_blank">3rd Wave Media</a> for the
+                            elegant documentation template.</small>
+                        <!--//social-list-->
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!--//docs-wrapper-->
+
+
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js">
+    </script>
+    <script src="assets/js/highlight-custom.js"></script>
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>
