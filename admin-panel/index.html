@@ -456,6 +456,7 @@
 
                                     <div>
                                         <br>
+                                    
                                         M.You need to set this details in eDemand admin panel -> Firebase Settings Page
                                         from Settings page
                                         <br><br>
@@ -464,6 +465,36 @@
                                         </a>
                                     </div>
 
+
+                                    <div>
+                                        <br>
+                                        N.You need to set this details in firebase-messaging-sw.js file
+                                        <br><br>
+                                            <b><u>Note::</u></b> If firebase-messaging-sw.js not exist inside your root folder then create a file with firebase-messaging-sw.js name inside your project folder.
+                                        <br><br>
+                                        firebase.initializeApp
+                                        <br>
+                                        ({
+                                        <br>
+                                        apiKey: "Your apiKey",
+                                        <br>
+                                        authDomain: "Your authDomain",
+                                        <br>
+                                        projectId: "Your projectId",
+                                        <br>
+                                        storageBucket: "Your storageBucket",
+                                        <br>
+                                        messagingSenderId: "Your messagingSenderId",
+                                        <br>
+                                        appId: "Your appId",
+                                        <br>
+                                        measurementId: "Your measurementId"
+                                        <br>
+                                        });
+                                        <a href="assets/images/fb-14.png">
+                                            <img src="assets/images/fb-14.png" class="image-doc">
+                                        </a>
+                                    </div>
                             </section>
                             <!--//docs-intro-->
                         </header>
