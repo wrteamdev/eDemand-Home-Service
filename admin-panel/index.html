@@ -148,6 +148,17 @@
                                 &nbsp;
                                 Featured Section</a></li>
 
+
+
+
+                    
+
+
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#item-10-11"><span
+                                    class="theme-icon-holder me-2"><i class="fas fa-wrench"></i></span>Auto Update</a>
+                        </li>
+                        <!-- <li class="nav-item section-title"><a class="nav-link scrollto " href="#item-10-11"><i class="fas fa-wrench"></i></span></a>
+                        </li> -->
                     </ul>
 
                 </nav>
@@ -456,7 +467,7 @@
 
                                     <div>
                                         <br>
-                                    
+
                                         M.You need to set this details in eDemand admin panel -> Firebase Settings Page
                                         from Settings page
                                         <br><br>
@@ -470,7 +481,9 @@
                                         <br>
                                         N.You need to set this details in firebase-messaging-sw.js file
                                         <br><br>
-                                            <b><u>Note::</u></b> If firebase-messaging-sw.js not exist inside your root folder then create a file with firebase-messaging-sw.js name inside your project folder.
+                                        <b><u>Note::</u></b> If firebase-messaging-sw.js not exist inside your root
+                                        folder then create a file with firebase-messaging-sw.js name inside your project
+                                        folder.
                                         <br><br>
                                         firebase.initializeApp
                                         <br>
@@ -493,8 +506,8 @@
                                         });
                                         <a href="assets/firebase_messaging.js" target="_blank">
                                             <br><br>
-                                           View firebase-messaging-sw.js 
-                                           and put content in file  
+                                            View firebase-messaging-sw.js
+                                            and put content in file
                                             <!-- <img src="assets/firebase_js.js" class="image-doc"> -->
                                         </a>
                                     </div>
@@ -1073,6 +1086,33 @@
                                     </li>
                                 </ul>
                             </ol>
+                        </section>
+
+
+
+                        <section class="docs-section" id="item-10-11">
+                            <!-- start auto update -->
+                            <h2 class="section-heading">Auto Update</h2>
+                            <!-- <h1 id="update"><a href="#update">Auto Update</a></h1> -->
+                            <h3>How to auto update your admin panel or web version to latest version?</h3>
+                            <div class="alert alert-warning"><b>Note</b> : If you are upgrading your from very old
+                                version then
+                                please update the system in sequence one after the another. Don't skip any version in
+                                between.
+                            </div>
+                            <ol>
+                                <li>Find <b>update from vX.X to vX.X.X.zip</b> file from downloded PHP source code.You will findfile on this location: eDemand admin - current_version/Updates/your_required_version_update_file.zip</li>
+                                <li>Visit <code>your_url/admin/settings/updater</code>
+                                </li>
+                                <li>You will see simple instructions, current version to latest version information and
+                                    <b>"Update The System"</b> button.
+                                </li>
+                                <li>Upload <b>update.zip</b> file.</li>
+                                <li>Click on that Update Button. </li>
+                                <li>That's all. You have successfully updated your system from older version to newer
+                                    one.</li>
+                            </ol>
+                            <!-- end auto update -->
                         </section>
                     </article>
                     <!--//docs-article-->
