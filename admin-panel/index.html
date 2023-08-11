@@ -87,6 +87,14 @@
                                 eDemand?</a>
                         </li>
 
+
+                   
+
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#server-requirement">
+                            <span class="theme-icon-holder me-2"><i class="fas fa-wrench"></i></span>Server Requirement
+                        </a>
+                        </li>
+
                         <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2">
                                 <span class="theme-icon-holder me-2"><i
                                         class="fas fa-arrow-down"></i></span>Installation</a>
@@ -1116,7 +1124,97 @@
                         </section>
                     </article>
                     <!--//docs-article-->
-                    
+
+                    <article class="docs-article" id="server-requirement">
+                        <header class="docs-header">
+                            <h1 class="docs-heading">Server Requirement</h1>
+                            <section class="docs-intro">
+                                <ol>
+
+                                    <li>
+
+                                        <p> Php Version  : 8.1</p>
+                                    </li>
+                                    <li>
+
+                                        <p> Set max_upload_size  to 100M in your php version</p>
+                                    </li>
+                                </ol>
+
+                                <h3>Set Cron Job in your server</h3>
+
+                                <h4 style="margin-bottom: 25px;">
+                                    You can find your cron job url from admin panel
+    
+    
+    
+                                </h4>
+                                <a href="assets/images/cron_jon1.png" >
+
+                                    <img src="assets/images/cron_jon1.png" class="image-doc" alt="" style="margin-bottom: 15px">
+                                </a>
+                                <a href="assets/images/cron_job2.png">
+
+                                    <img src="assets/images/cron_job2.png" class="image-doc" alt=" " style="margin-bottom: 15px">
+                                </a>
+                               <p> 
+
+                                    Why Use a Cron Job:
+                                    Imagine a task that needs to be done every day, like changing subscription statuses. A cron job is like a helpful robot that does this task automatically at the same time each day. This makes sure things are accurate and saves you time.
+                                    How to Set Up a Cron Job:
+                               </p>
+                             
+                                <li>
+                                    
+                                    Step 1: Log into cPanel:
+                                    Open your web browser and enter your cPanel URL. Log in using your credentials.
+                                </li>
+                                <li>
+    
+                                    Step 2: Navigate to Cron Jobs:
+                                    Search for “Cron Jobs” in the cPanel search bar, or scroll down to the “Advanced” section and find “Cron Jobs.” Click on it.
+                                </li>
+                                <li>
+    
+                                    Step 3: Choose Add New Cron Job:
+                                    You’ll see a list of current cron jobs. Scroll down to the “Add New Cron Job” section.
+                                </li>
+                                <li>
+    
+                                    Step 4: Set the Timing:
+                                    For our specific case, since we want to change the subscription status at midnight, select “Every day” and set the time to 12:00 AM (midnight).
+                                </li>
+                                <li>
+    
+                                    Step 5: Add the Command:
+                                    In the “Command” field, enter the full URL of the script or file you want to run as the cron job. This is the URL of the task you want to automate. <b>(Ex : https://edemand.wrteam.me/update_subscription_status)</b>
+                                </li>
+                                <li>
+    
+                                    Step 6: Save the Cron Job:
+                                    Click the “Add New Cron Job” button to save your settings.
+                                </li>
+                                <li>
+    
+                                    Step 7: Confirm Cron Job:
+                                    You’ll see a confirmation message that your cron job has been added. Double-check the details to make sure everything is correct.
+                                </li>
+                                <li>
+    
+                                    Step 8: Test the Cron Job:
+                                    To make sure the cron job is working as expected, you can test it. You might need to wait until the scheduled time for the test.
+                                </li>
+                                <li>
+    
+                                    Step 9: Edit or Delete Cron Jobs:
+                                    If you need to change or remove a cron job, you can do so from the same “Cron Jobs” section in cPanel.
+                                </li>
+
+                             
+                            </section>
+                            <!--//docs-intro-->
+                        </header>
+                    </article>
                 </div>
             </div>
         </div>
