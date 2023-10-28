@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>eDemand Documentation</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="eDemand Documentation">
+    <meta name="author" content="eDemand  Documentation">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/path/to/styles/default.min.css">
+    <!-- <link rel="stylesheet"
+         href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+      <link rel="stylesheet"
+         href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css"> -->
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="/path/to/styles/default.min.css">
+    <style>
+        .image-doc {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+        }
+
+        .twenty {
+            height: 20px;
+        }
+
+        .title-img {
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body class="docs-page">
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible
+                     me-2 d-xl-none" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="#section-1"><img class="logo-icon me-2"
+                                src="assets/images/edemand_logo-light.png" alt="logo"><span class="logo-text"><span
+                                    class="text-alt">Documentation</span></span></a></div>
+                </div>
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column
+                  pb-3">
+                    <li class="nav-item section-title"><a class="nav-link
+                     scrollto" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas
+                     fa-map-signs"></i></span>Introduction</a>
+                    </li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2">
+                            <span class="theme-icon-holder me-2"><i class="fa fa-desktop"></i></span>Devlopment
+                            Enviornment</a>
+                    </li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3">
+                            <span class="theme-icon-holder me-2"><i class="fas fa-stream"></i></span>System
+                            Flow</a>
+                    </li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5">
+                            <span class="theme-icon-holder me-2"><i class="fa fa-file"></i></span>Firebase
+                            Configuration</a>
+                    </li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6">
+                            <span class="theme-icon-holder me-2"><i class="fa fa-server"></i></span>How to Add Map API
+                            key</a>
+                    </li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#item-5-1"><span
+                                class="theme-icon-holder me-2"><i class="fas
+                     fa-tools"></i></span>System
+                            Configuration</a>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1"><i class="fas fa-cog"></i>
+                            &nbsp;
+                            system settings</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2"><i class="fa fa-language"></i>
+                            &nbsp;
+                            create your own language</a>
+                    </li>
+                   
+                    </li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4">
+                            <span class="theme-icon-holder me-2"><i class="fa fa-file"></i></span>Pages and Component
+                            Info</a>
+                    </li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7">
+                            <span class="theme-icon-holder me-2"><i class="fa fa-server"></i></span> Generate Build &
+                            Deploy on Live Server</a>
+                    </li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
+                                class="theme-icon-holder me-2"><i class="fas
+                     fa-tools"></i></span>Support</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <header class="docs-header">
+                        <h2 class="section-heading">Introduction
+                        </h2>
+                        <section class="docs-intro">
+                            <p>eDemand is a Professional on-demand service Platform. Here we will provide you only exciting content, which you will like very much. We're dedicated to providing you with the best of on-demand service, with a focus on dependability and providing doorstep service. We're working to turn our passion for on-demand service into a booming online website. We hope you enjoy our on-demand service as much as we enjoy offering them.
+                            </p>
+
+                        </section>
+                    </header>
+                </article>
+                <article class="docs-article" id="section-2">
+                    <header class="docs-header">
+                        <h2 class="section-heading">Setup Devlopment
+                            Enviornment
+                        </h2>
+                        <section class="docs-intro" id="item-6-0">
+                            <div class="callout-block callout-block-info">
+                                <div class="content">
+                                    <h4 class="callout-title">
+                                        <span class="callout-icon-holder
+                                 mr-1">
+                                            <svg class="svg-inline--fa
+                                    fa-info-circle fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas"
+                                                data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                                <path fill="currentColor" d="M256 8C119.043 8 8
+                                       119.083 8 256c0 136.997
+                                       111.043 248 248
+                                       248s248-111.003
+                                       248-248C504 119.083
+                                       392.957 8 256 8zm0
+                                       110c23.196 0 42 18.804
+                                       42 42s-18.804 42-42
+                                       42-42-18.804-42-42
+                                       18.804-42 42-42zm56
+                                       254c0 6.627-5.373 12-12
+                                       12h-88c-6.627
+                                       0-12-5.373-12-12v-24c0-6.627
+                                       5.373-12
+                                       12-12h12v-64h-12c-6.627
+                                       0-12-5.373-12-12v-24c0-6.627
+                                       5.373-12 12-12h64c6.627
+                                       0 12 5.373 12
+                                       12v100h12c6.627 0 12
+                                       5.373 12 12v24z"></path>
+                                            </svg>
+                                            <!-- <i class="fas fa-info-circle"></i> Font Awesome fontawesome.com -->
+                                        </span>
+                                        <!--//icon-holder-->
+                                        Note
+                                    </h4>
+                                    <p>Kindely suggest to use npm version
+                                        9.7.1 and Node Js version 18.16.0 or
+                                        current latest version of node.
+                                    </p>
+                                </div>
+                                <!--//content-->
+                            </div>
+                            <p>
+                                To start your react web app, we need to
+                                setup the react devlopment Enviornment.
+                                Install NodeJS on your machine if you don't
+                                have it.
+                            </p>
+                            <li>Node Js</li>
+                            <p>NodeJS works as a node package manager behind
+                                the scene. It is recommended to download and
+                                install the latest version of Node JS from
+                                its official site <a href="http://nodejs.org/">http://nodejs.org/</a>
+                            </p>
+                            <h2 class="section-heading">Preparing files for
+                                the first run
+                            </h2>
+                            <p><b>1. Copy Files </b>: Copy files from the
+                                downloaded code to your desired folder. For
+                                example : C:\react\eDemand\
+                            </p>
+
+
+
+                            <p><b>2. Open the folder and command line
+                                    terminal</b> :
+                                Open that folder in code editor / terminal
+                                and use command line
+                                tool i.e. powershell, cmd or any other
+                                terminal and
+                                navigate to the your project root like
+                                C:\react\eDemand\.
+                            </p>
+                            <p><b>3. Install Packages and Dependencies</b> :
+                                Hit the below shown command to install all
+                                the required dependencies and packages
+                            </p>
+                            <pre><code class="language-html"><span class="hljs-attr">C:\react\eDemand> npm install</span></code></pre>
+                            <p>Or Install packages via below command in case if you are facing any issues with above
+                                command</p>
+                            <p><b>4. Run the App</b> : After successful
+                                installation of the dependencies / packages
+                                now you are ready to run your project on
+                                your local server.
+                            </p>
+                            <p>To run fire this command in the terminal
+                                again :
+                            </p>
+                            <pre><code class="language-html"><span class="hljs-attr">C:\react\eDemand> npm start</span>
+                                
+[ wait ] starting the development server ...
+[ ready ] started server on
+http://localhost:3000 ...
+[ event ] compiled successfully
+Now, in the browser go to <a href="localhost:3000">localhost:3000</a>
+                            </code></pre>
+                            <p><b>5. Your app is live</b> : You can finally
+                                browse your react eDemand app somewhere
+                                here >> http://localhost:3000.
+                            </p>
+                        </section>
+                </article>
+
+                <article class="docs-article" id="section-3">
+                    <h2 class="section-heading">System
+                        Flow
+                    </h2>
+                    <section class="docs-intro">
+                        <p>
+                        <ol>
+                            <li>Customer will place the order based on location they want.</li>
+                            <li>Customer can order form one service provider at a time.</li>
+                            <li>Without login customer can't place an order.</li>
+                        </ol>
+                        </p>
+                    </section>
+                </article>
+                <article class="docs-article" id="section-5">
+                    <header class="docs-header">
+                        <h2 class="section-heading">Configure the firebase setup for login web version
+                        </h2>
+                        <section class="docs-intro" id="item-6-0">
+                            <div class="callout-block callout-block-info">
+                                <div class="content">
+                                    <h4 class="callout-title">
+                                        <span class="callout-icon-holder
+                                    mr-1">
+                                            <svg class="svg-inline--fa
+                                       fa-info-circle fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas"
+                                                data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                                <path fill="currentColor" d="M256 8C119.043 8 8
+                                          119.083 8 256c0 136.997
+                                          111.043 248 248
+                                          248s248-111.003
+                                          248-248C504 119.083
+                                          392.957 8 256 8zm0
+                                          110c23.196 0 42 18.804
+                                          42 42s-18.804 42-42
+                                          42-42-18.804-42-42
+                                          18.804-42 42-42zm56
+                                          254c0 6.627-5.373 12-12
+                                          12h-88c-6.627
+                                          0-12-5.373-12-12v-24c0-6.627
+                                          5.373-12
+                                          12-12h12v-64h-12c-6.627
+                                          0-12-5.373-12-12v-24c0-6.627
+                                          5.373-12 12-12h64c6.627
+                                          0 12 5.373 12
+                                          12v100h12c6.627 0 12
+                                          5.373 12 12v24z"></path>
+                                            </svg>
+                                            <!-- <i class="fas fa-info-circle"></i> Font Awesome fontawesome.com -->
+                                        </span>
+                                        <!--//icon-holder-->
+                                        Note
+                                    </h4>
+                                    <p>This step is very much important for web version login and register feature to
+                                        work. So please follow the below steps carefully.
+                                    </p>
+                                </div>
+                            </div>
+                            <h6 class="section-heading">1. Create Firebase Project</h6>
+                            <p>1. Go to >> Firebase console << .</p>
+                                    <p>2. Register a new account or try to log in with existing google accout.</p>
+                                    <img src="./assets/images/consolepage.png" /><br /><br />
+
+                                    <p>3. Once logged in, you can see firebase console dashboard. Click on Add Project.
+                                        Provide a project name, and then select country and then after that click on
+                                        Create Project. For example, see the below image</p>
+                                    <img src="./assets/images/AddProject.png" /><br /><br />
+                                    <img src="./assets/images/CreateProject.png" /><br /><br />
+                                    <p>4. Once the project has been created, it will automatically redirect to Firebase
+                                        dashboard screen.</p>
+                                    <img src="./assets/images/Dashboard.png" /><br /><br />
+                                    <p>5. As eDemand(Web version) is a web project, you need to add web
+                                        project/application to the firebase project.</p>
+                                    <img src="./assets/images/Dashboard_1.png" /><br /><br />
+                                    <p>6. Go to Authentication and open " Sign-in method " Tab</p>
+                                    <img src="./assets/images/authentication.png" / width="1000px"><br /><br />
+                                    <p>7. Now at the bottom of the page, in "Authorized domains", localhost and a
+                                        Firebase domain are automatically added. Here we've to add domain name without
+                                        http:// and https:// whever eDemand Front End(Web Version) Website will get
+                                        hosted. If you're using www as prefix of domain name then you must have to add
+                                        that.</p>
+                                    <p>8. Now add your domain with www. as prefix like www.myeDemand.com</p>
+                                    <img src="./assets/images/addDomain.png" width="1000px" /><br /><br />
+                                    <p>9. Go to Project settings in firebase dashboard option.</p>
+                                    <img src="./assets/images/web_setting_details.png" width="1000px" /><br /><br />
+                                    <p>10. Go to Project settings and scroll down you will find created web App there
+                                        you find config option that will have firebase settings for front end.</p>
+                                    <p>11. here you have to set all details except the two fields 1. databaseURL & 2.
+                                        measurementId. Here you can set only test word.</p>
+                                    <img src="./assets/images/web_setting_config.png" width="1000px" /><br /><br />
+                                    <p>12. You need to set this details in eDemand admin panel -> Web Settings page from
+                                        this Project settings page in firebase dashboard option</p>
+                                    <img src="./assets/images/eDemand-admin-panel.png" width="1000px" />
+                        </section>
+                </article>
+                <article class="docs-article" id="section-6">
+                    <h2 class="section-heading">How to Add Map API key</h2>
+                    <p>1. Go to Google Cloud Platform. <a href="https://cloud.google.com/" target="_blank">Click
+                            here</a></p>
+                    <p>2. Click on console.</p>
+                    <img src="./assets/images/mapAPI1.png" width="1000px" /><br /><br />
+                    <p>3. Select your Firebase Project</p>
+                    <img src="./assets/images/mapAPI2.png" width="1000px" /><br /><br />
+                    <p>4. While following this Offical Documentation there you need to enable two APIs You need to
+                        enable
+                        1) Places, 2)Javascript Map API and 3) Geocoding API
+                        these APIs
+
+                        <a href="https://developers.google.com/maps/documentation/javascript/cloud-setup"
+                            target="_blank">Offical Documentation for creating API key</a>
+                    </p>
+                    <p>5. Click on Enable to, enable that APIs</p>
+                    <img src="./assets/images/enableAPI.png" width="1000px" /><br /><br />
+                    <p>6. Go to Credential Tab. you will find your web API keys.</p>
+                    <img src="./assets/images/credentials.png" width="1000px" /><br /><br />
+                    <p>7. copy that key and paste in following file.</p>
+                    <p>eDemand > .env > REACT_APP_MAP_API </p>
+                </article>
+                <article class="docs-article" id="item-5-1">
+                    <h2 class="section-heading">System Configuration Using .env file</h2>
+                    <p>You can set your API URL which fetches data from the server and a link to partner registration
+                        page here. To configure these<br> You can find <b>.env</b> file in your root of the project.</p>
+                        <p>It is necesary for to setup the Google Maps API key and other settings here in the config.js to
+                            make your site work. To configure these<br> Go to 
+                    <pre><code>
+                        # APP NAME
+                        REACT_APP_NAME="eDemand"
+                        
+                        #BASE URL 
+                        REACT_APP_BASE_URL = "YOUR_ADMIN_PANEL_URL"
+                        
+                        # MAP API KEY
+                        REACT_APP_MAP_API = "***********************************"
+                        
+                        REACT_APP_INSTAGRAM_LINK = "https://www.instagram.com/*******"
+                        REACT_APP_WHATSAPP_NUMBER = "************"
+                        REACT_APP_FACEBOOK_LINK =
+                          "https://www.facebook.com/profile.php?id=****************"
+                        REACT_APP_TWITTER_LINK = "https://twitter.com/**************"
+                        REACT_APP_LINKEDIN_LINK = "https://www.linkedin.com/company/************"
+                        
+                        REACT_APP_PLAY_STORE_LINK = "#"
+                        REACT_APP_APPLE_STORE_LINK = "#"
+
+                        REACT_APP_FIREBASE_API_KEY = "*******************************"
+                        REACT_APP_FIREBASE_AUTH_DOMAIN = "*******-**********"
+                        REACT_APP_FIREBASE_PROJECT_ID = "*******-*********"
+                        REACT_APP_FIREBASE_STORAGE_BUCKET = "******-*************"
+                        REACT_APP_FIREBASE_MESSAGEING_SENDER_ID = "***************"
+                        REACT_APP_FIREBASE_APP_ID = "*:*******:*****************"
+                        REACT_APP_FIREBASE_MESUMENT_ID = "G-****************************"
+                        REACT_APP_FIREBASE_VAPID_KEY = "BNh8i559_************************************-SjfHPA"
+                      
+                  </code></pre>
+
+                    <h2 class="section-heading">System Configuration Using Config.js</h2>
+                    <p>It is necesary for to setup Logos here in the config.js to
+                        make your site work. To configure these<br> Go to <b>
+                            src\config\config.js
+                        </b> file.</p>
+                    <pre><code>
+                        // LOGOS
+                        export const LIGHT_LOGO = "/images/edemand_logo-light.png";
+                        export const DARK_LOGO = "/images/edemand_logo-dark.png";
+
+   
+                  </code></pre>
+
+                    </section>
+                    <section id="item-5-2">
+                        <h2 class="section-heading">Create Your Own Language</h2>
+                        <p><b>1. Create Folder</b>:
+                            create your language folder in this
+                            destination src\Languages.</p>
+                        <img src="./assets/images/language.png" />
+                        <p><b>2. Create Your Newely Added Language
+                                Labels</b>: In your language folder
+                            create
+                            translation.json file.
+                            In the <code>translation.json</code>file
+                            you can add
+                            your
+                            react web labels.</p>
+                        <p><b>3. Add Your Language Code</b>:
+                            Add your language code in this line. src\config\config.js</p>
+                        <img src="./assets/images/add-lan.png">
+                        &nbsp;
+                        <p><b>4. Your Language is Added</b>:
+                            Hurrey you successfully add your own
+                            language in your react web.</p>
+                    </section>
+                </article>
+                <article class="docs-article" id="section-4">
+                    <section class="docs-section" id="item-9-1">
+                        <h2 class="section-heading">Pages and
+                            component
+                            Info
+                        </h2>
+                        <ol>
+                            <li>Default Home Page(src/Pages/Home.js)</li>
+                            <li>Category Page( /categories ) </li>
+                            <li>All Providers(Pages/Provider.js)</li>
+                            <li>Bookmark (/profile/bookmark)</li>
+                            <li>Bookings (/profile/booking)</li>
+                            <li>transactions (/profile/transactions)</li>
+                            <li>address (/pages/address)</li>
+                        </ol>
+                        <h2 class="section-heading">Template
+                            Features
+                        </h2>
+                        <ol>
+                            <li>ES6+</li>
+                            <li>React Js 18+</li>
+                            <li>Easy Customization</li>
+                            <li>Support Multilanguage</li>
+                        </ol>
+                    </section>
+                </article>
+
+                <article class="docs-article" id="section-7">
+                    <header class="docs-header">
+                        <h2 class="section-heading">Generate Build & Deploy On live Server
+                        </h2>
+                        <section class="docs-intro" id="item-6-0">
+                            <p><b>1. Generate Build And Deploy on live server </b>: To Generate Build
+                                Hit the below shown command.
+                            </p>
+                            <p>
+                                Set Your Deployment FTP details here
+                                <details title="FTP Details">
+                                    <summary> FTP Details </summary>
+                                    <pre>
+                                        host: "*********", <br>
+                                        user: "***********",<br>
+                                        password: "**********",<br>
+                                        port: 21, <br>
+                                    </pre>
+                                </details>
+                            </p>
+                            <pre><code class="language-html"> <span class="hljs-attr">C:\react\eDemand> npm run depoly</span></code></pre>
+                            <p><b>3. Run your React Web App on Your Server
+                                </b>: first check .htaccess file is there on
+                                your server or not. If not then add
+                                .htaccess file
+                                on your server.
+                            </p>
+                            <pre><code class="language-html">Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]</code></pre>
+                            <p><b>4. Add Build Zip File </b>: 
+                                Upload Your Build Zip File On Your Server (if you have used npm run deploy to deploy then you can ignore this step).
+                            </p>
+                            <p><b>5. Your app is live </b>: You can finally
+                                browse your react eDemand app
+                                on your server.
+                            </p>
+                        </section>
+                </article>
+
+                <article class="docs-article" id="section-9">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Support</h1>
+                        <section class="docs-intro">
+                            <p>
+                                If you are facing any technical
+                                issues or challanges while using our
+                                system. You can
+                                contact us on skype.
+                                We are available for technical
+                                support from <strong> 9.00AM to
+                                    6.00PM Indian Standard
+                                    Time Monday
+                                    to Friday </strong>.
+                            </p>
+                            <h3>For Web related issues
+                                contact here,
+                            </h3>
+                            <a href='skype:live:jaydeepjgiri'>Drop
+                                a Message on Skype</a> or Search
+                            this ID on
+                            Skype :live:jaydeepjgiri
+                        </section>
+                    </header>
+                </article>
+                <footer class="footer">
+                    <div class="container text-center py-5">
+                        <small class="copyright">Made with <3 by <a href="https://www.infinitietech.com/"
+                                target="_blank">
+                                Infinitie Technologies</a></small><br>
+                        <small class="copyright">Thanks to <a href="https://themes.3rdwavemedia.com/"
+                                target="_blank">3rd Wave Media</a>
+                            for
+                            the
+                            elegant documentation template.</small>
+                        <!--//social-list-->
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!--//docs-wrapper-->
+    <!-- Javascript -->
+    <script src="/path/to/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/path/to/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script>
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="assets/js/docs.js"></script>
+</body>
+
+</html>
