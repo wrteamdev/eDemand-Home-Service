@@ -29,7 +29,7 @@
 					<li><a href="#setup" style="color:#ff0039">How to setup Flutter</a></li>
 
 					<!-- <li><a href="#flutter2" style="color:#ff0039">Upgrade to flutter 3.x</a></li> -->
-					<li><a href="#open" style="color:#ff0039">How to first run project</a></li>
+					<li><a href="#open" style="color:#ff0039">How to Run Your Project for the First Time</a></li>
 					<li><a href="#appname" style="color:#ff0039">How to change App name</a></li>
 					<li><a href="#version" style="color:#ff0039">How to change App Version</a></li>
 					<li><a href="#applogo" style="color:#ff0039">How to change App logo</a></li>
@@ -251,61 +251,52 @@
 
 						<section id="open">
 							<div class="container"> <br>
-								<h2>How to first run project</h2>
-
-								<ol>
-
-									<img src="images/open2.webp" alt="eDemand" />
-									<br><br>
-									<li>Go to file > open > then choose your downloaded project location then your
-										project will open.and if you see upar right part 'enable dart support' then
-										click that and go to pubspec.yaml file and in uper right part click pub get or
-										package get and then press run button.</li><br>
-								</ol>
-								<ol>
-									<li><b>If your are getting error then you can perform below hack</b>
-
-									<li>if in your system firewall is on, then you can temporary disable firewall and
-										then try to run project</li>
-
-									<li>if your flutter channel is not stable then you need to change it to stable. you
-										can check your flutter channel by terminal. </li>
-									<li>go to android studio in bottom line click on terminal, in terminal write flutter
-										channel.as shown below.</li>
-									<br>
-									<img src="images/ch1.webp" alt="eDemand" />
-									<br><br>
-									<li>if your are not in stable then write flutter channel stable</li>
-
-									<li>go to Tools > Flutter > Flutter Clen.</li>
-									<li>go to file > invalidate cache/ restart</li>
-
-
-								</ol>
-								<div class="section_bdr"></div>
-								</ul>
-							</div>
+								<h2>How to Run Your Project for the First Time</h2>
+								<p>To open your downloaded project:</p>
+    <ol>
+        <li>Go to <strong>File</strong>.</li>
+        <li>Click on <strong>Open</strong>.</li>
+        <li>Choose the location of your downloaded project.</li>
+        <li>Your project will open.</li>
+        <li>Go to the <strong>pubspec.yaml</strong> file.</li>
+        <li>In the upper right part, click on <strong>Pub Get</strong> or <strong>Package Get</strong>.</li>
+		<img src="images/open2.webp" alt="eDemand" />
+		<li>Then, press the <strong>Run</strong> button.</li>
+		<li>Ensure that your physical device is properly connected before proceeding.</li>
+		<img src="images/open3.webp" alt="eDemand" />
+    </ol>	</div>
 						</section>
 
 
 						<section id="appname">
 							<div class="container"> <br>
-								<h2>How to change AppName</h2>
-
+								<h2>How to Change AppName</h2>
 								<ol>
-
-									<img src="images/appname1.webp" alt="eDemand" />
+									<li>Visit the <b>constant.dart</b> file located in lib/utils/constant.dart</li>									<img src="images/appname1.webp" alt="eDemand" />
 									<br><br>
-									<li>For Android, to change label that is shown below android app icon, open android
-										> app > src > main > open mainfest.xml and inside that label change that string
-										as shown in below fig. </li><br>
+									<p><h4>To change the label displayed below an Android app icon, follow these steps:</h4></p>
+									<ol>
+									  <li>Open the Android Studio.</li>
+									  <li>Navigate to your project folder.</li>
+									  <li>Go to the "app" folder.</li>
+									  <li>Inside the "app" folder, find the "src" folder.</li>
+									  <li>Within the "src" folder, locate the "main" folder.</li>
+									 
+									  <li>You'll find a file named "AndroidManifest.xml" inside the "main" folder.</li>
+									  <li>Open the "AndroidManifest.xml" file.</li>
+									  <li>Change the text inside the quotes after <code>android:label="eDemand"</code> to your desired label text.</li>
+									  <li>Save the changes.</li>
+									</ol>
 									<img src="images/appname2.webp" alt="eDemand" />
-									<br><br>
-									<li>For iOS, to change label that is shown below ios app icon, open ios > Runner >
-										Info.plist inside that <key>CFBundleName</key> change that string as shown in
-										below fig. </li><br>
-									<img src="images/appname3.webp" alt="eDemand" />
-
+									<p><h4>To change the label displayed below the icon of your iOS app, follow these steps:</h4></p>
+									<ol>
+										<li>Go to the iOS folder, then open the Runner folder, and finally locate the <b>Info.plist</b> file.
+										</li>
+										<li>Find the entries for <code>CFBundleDisplayName</code> and <code>CFBundleName</code>.</li>
+										<li>Edit the string values to your desired label as illustrated below:</li>
+									</ol>
+										<img src="images/appname3.webp" alt="eDemand" />
+								
 								</ol>
 								<div class="section_bdr"></div>
 								</ul>
@@ -317,32 +308,44 @@
 								<h2>How to change App Version</h2>
 
 								<ol>
-
-
-									<li>go to pubspec.yaml </li>
-									<li>EX.Update version:A.B.C+X in pubspec.yaml.
-									<li>For Android:</li>
-									A.B.C represents the versionName such as 1.0.0.
-
-									X (the number after the +) represents the versionCode such as 1, 2, 3, etc.</li>
-
-									<li><b>Do not forget</b> to execute flutter packages get, flutter build or flutter
-										run after this step
-									</li><br><br>
+									<li>Open the file named "pubspec.yaml".</li>
+									<li>
+										Update the version in "pubspec.yaml" like this: <br>
+										<code>A.B.C+X</code>
+										<ul>
+											<li><b>A.B.C</b> stands for the version name, such as 1.0.0.</li>
+											<li><b>X</b> (the number after the +) stands for the version code, like 1, 2, 3, etc.</li>
+										</ul>
+									</li>
+									<li><b>Don't forget:</b> After completing these steps, remember to run <code>flutter pub get</code>.</li>
+								
 
 									<img src="images/version_1.webp" alt="eDemand" />
 									<br><br>
 
-									<li>For iOS</li>
-									<li>
+									<ul>
+										<li>For iOS:</li>
+							
+										<li>Open your project in Xcode.</li>
+										<ol>
+										<li>Select "Runner" from the targets.</li>
+										<li>Select "General" from the list.</li>
+										<li>Check for the version and build:</li>
+										<ul>
+										  <li><strong>Version:</strong> Represents as 1.0.0.</li>
+										  <li><strong>Build:</strong> Represents as 1, 2, 3, etc.</li>
+										</ul>									  <img src="images/version_2.webp" alt="eDemand" />
+										<li>Select "Runner" from the targets.</li>
+										<li>Select "Build Settings" from the list.</li>
+										<li>Check for the FLUTTER_BUILD_NAME and FLUTTER_BUILD_NUMBER:</li>
+										<ul>
+										  <li><strong>FLUTTER_BUILD_NAME:</strong> Represents as 1.0.0.</li>
+										  <li><strong>FLUTTER_BUILD_NUMBER:</strong> Represents as 1, 2, 3, etc.</li>
+										</ul>										  <img src="images/version_3.webp" alt="eDemand" />
+</ol>
+									  </ul>
 
-										A.B.C represents the CFBundleShortVersionString such as 1.0.0.
 
-										X (the number after the +) represents the CFBundleVersion such as 1, 2, 3, etc.
-									</li>
-
-									<li><b>Do not forget</b> to execute flutter packages get, flutter build or flutter
-										run after this step</li>
 
 								</ol>
 								<div class="section_bdr"></div>
@@ -353,17 +356,15 @@
 
 						<section id="applogo">
 							<div class="container"> <br>
-								<h2>How to Change app logo</h2>
+								<h2>How to Change App Logo</h2>
 								<ol>
-
-									<li>For Android, open android > app > src > main > res > mipmap add here your logo
-										according to device screen size </li><br>
-									<img src="images/logo_1.webp" alt="eDemand" />
-									<br><br>
-									<li>For iOS, open ios > Runner > Assets.xcassets > AppIcon.appiconset here you need
-										to put your logo according to diffrent size. </li><br>
-									<img src="images/logo_2.webp" alt="eDemand" />
-
+								  <li>For Android, navigate to android > app > src > main > res > mipmap and add your logo here, ensuring it fits the device screen size.</li>
+								  <br>
+								  <img src="images/logo_1.webp" alt="eDemand">
+								  <br><br>
+								  <li>For iOS, navigate to ios > Runner > Assets.xcassets > AppIcon.appiconset. Here, you must place your logo in various sizes for different requirements.</li>
+								  <br>
+								  <img src="images/logo_2.webp" alt="eDemand">
 								</ol>
 								<div class="section_bdr"></div>
 								</ul>
@@ -373,20 +374,15 @@
 
 						<section id="appcolor">
 							<div class="container"> <br>
-								<h2>How to Change app color</h2>
-								<ol>
+								<h2>How to Change App Color</h2>
+    <ol>
+        <li>To change the color of your app, you need to add your color code in the file <b>colors.dart</b> located in <b>lib > utils</b>.</li>
+        <li>In Flutter, color codes always begin with <code>0xff</code>. After these four letters, you should add your color's hexadecimal code. Refer to the image below to see how you can adjust the primary, secondary, accent, and subheading colors for both light and dark themes.</li>
 
-									<li>To change app color, your need to add your color code in lib > utils>
-										colors.dart</li>
-									<li>In flutter color code start from 0xff so your have to add your color hex after
-										this 4 digit.your can change primary,second,fontcolor as shown in below image.
-									</li><br>
-
-									<img src="images/appcolor.webp" alt="eDemand" />
-									<br><br>
-
-
-								</ol>
+        <br>
+        <img src="images/appcolor.webp" alt="eDemand" />
+        <br><br>
+    </ol>
 								<div class="section_bdr"></div>
 								</ul>
 							</div>
