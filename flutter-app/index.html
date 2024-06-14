@@ -52,13 +52,15 @@
 					<li><a href='#create_fcm' style="color:#ff0039">How to create Firebase Project</a></li>
 
 
-					<li><a href='#firebase_otp' style="color:#ff0039">How to Enable Firebase Phone
-							Authentication(OTP).</a></li>
+					<li><a href='#firebase_authentications' style="color:#ff0039">How to Enable Firebase
+							Authentications.</a></li>
 					<li><a href='#fcm' style="color:#ff0039">How to set Notification</a></li>
+					<li><a href='#deeplink' style="color:#ff0039">How to setup Deeplinks</a></li>
+
 					<!-- <li><a href='#otp' style="color:#ff0039">How to Change default country code for OTP.</a></li>
 -->
 
-					<li><a href='#link' style="color:#ff0039">How to Create Dynamic Link</a></li>
+					<!-- <li><a href='#link' style="color:#ff0039">How to Create Dynamic Link</a></li> -->
 					<li><a href="#map1" style="color:#ff0039">How to Add Map API key</a></li>
 					<!--
 					<li><a href='#payu' style="color:#ff0039">How to Manage payment gatway and add Credential in admin
@@ -74,6 +76,7 @@
 					<li><a href='#api' style="color:#ff0039">How Change Api parameter</a></li>
 					<li><a href='#privacy' style="color:#ff0039">Get Privacy-Policy URL for PlayStore.</a></li> -->
 					<li><a href='#currency' style="color:#ff0039">How to set Currency code for Application</a></li>
+					<li><a href='#ad_mob' style="color:#ff0039">How to setup Google Admob</a></li>
 					<li><a href='#apk' style="color:#ff0039">How to Generate Release APK</a></li>
 					<li><a href='#apk-iOS' style="color:#ff0039">How to Publish iOS App to App Store</a></li>
 
@@ -253,18 +256,20 @@
 							<div class="container"> <br>
 								<h2>How to Run Your Project for the First Time</h2>
 								<p>To open your downloaded project:</p>
-    <ol>
-        <li>Go to <strong>File</strong>.</li>
-        <li>Click on <strong>Open</strong>.</li>
-        <li>Choose the location of your downloaded project.</li>
-        <li>Your project will open.</li>
-        <li>Go to the <strong>pubspec.yaml</strong> file.</li>
-        <li>In the upper right part, click on <strong>Pub Get</strong> or <strong>Package Get</strong>.</li>
-		<img src="images/open2.webp" alt="eDemand" />
-		<li>Then, press the <strong>Run</strong> button.</li>
-		<li>Ensure that your physical device is properly connected before proceeding.</li>
-		<img src="images/open3.webp" alt="eDemand" />
-    </ol>	</div>
+								<ol>
+									<li>Go to <strong>File</strong>.</li>
+									<li>Click on <strong>Open</strong>.</li>
+									<li>Choose the location of your downloaded project.</li>
+									<li>Your project will open.</li>
+									<li>Go to the <strong>pubspec.yaml</strong> file.</li>
+									<li>In the upper right part, click on <strong>Pub Get</strong> or <strong>Package
+											Get</strong>.</li>
+									<img src="images/open2.webp" alt="eDemand" />
+									<li>Then, press the <strong>Run</strong> button.</li>
+									<li>Ensure that your physical device is properly connected before proceeding.</li>
+									<img src="images/open3.webp" alt="eDemand" />
+								</ol>
+							</div>
 						</section>
 
 
@@ -272,31 +277,43 @@
 							<div class="container"> <br>
 								<h2>How to Change AppName</h2>
 								<ol>
-									<li>Visit the <b>constant.dart</b> file located in lib/utils/constant.dart</li>									<img src="images/appname1.webp" alt="eDemand" />
+									<li>Visit the <b>constant.dart</b> file located in lib/utils/constant.dart</li> <img
+										src="images/appname1.webp" alt="eDemand" />
 									<br><br>
-									<p><h4>To change the label displayed below an Android app icon, follow these steps:</h4></p>
+									<p>
+									<h4>To change the label displayed below an Android app icon, follow these steps:
+									</h4>
+									</p>
 									<ol>
-									  <li>Open the Android Studio.</li>
-									  <li>Navigate to your project folder.</li>
-									  <li>Go to the "app" folder.</li>
-									  <li>Inside the "app" folder, find the "src" folder.</li>
-									  <li>Within the "src" folder, locate the "main" folder.</li>
-									 
-									  <li>You'll find a file named "AndroidManifest.xml" inside the "main" folder.</li>
-									  <li>Open the "AndroidManifest.xml" file.</li>
-									  <li>Change the text inside the quotes after <code>android:label="eDemand"</code> to your desired label text.</li>
-									  <li>Save the changes.</li>
+										<li>Open the Android Studio.</li>
+										<li>Navigate to your project folder.</li>
+										<li>Go to the "app" folder.</li>
+										<li>Inside the "app" folder, find the "src" folder.</li>
+										<li>Within the "src" folder, locate the "main" folder.</li>
+
+										<li>You'll find a file named "AndroidManifest.xml" inside the "main" folder.
+										</li>
+										<li>Open the "AndroidManifest.xml" file.</li>
+										<li>Change the text inside the quotes after <code>android:label="eDemand"</code>
+											to your desired label text.</li>
+										<li>Save the changes.</li>
 									</ol>
 									<img src="images/appname2.webp" alt="eDemand" />
-									<p><h4>To change the label displayed below the icon of your iOS app, follow these steps:</h4></p>
+									<p>
+									<h4>To change the label displayed below the icon of your iOS app, follow these
+										steps:</h4>
+									</p>
 									<ol>
-										<li>Go to the iOS folder, then open the Runner folder, and finally locate the <b>Info.plist</b> file.
+										<li>Go to the iOS folder, then open the Runner folder, and finally locate the
+											<b>Info.plist</b> file.
 										</li>
-										<li>Find the entries for <code>CFBundleDisplayName</code> and <code>CFBundleName</code>.</li>
+										<li>Find the entries for <code>CFBundleDisplayName</code> and
+											<code>CFBundleName</code>.
+										</li>
 										<li>Edit the string values to your desired label as illustrated below:</li>
 									</ol>
-										<img src="images/appname3.webp" alt="eDemand" />
-								
+									<img src="images/appname3.webp" alt="eDemand" />
+
 								</ol>
 								<div class="section_bdr"></div>
 								</ul>
@@ -314,36 +331,40 @@
 										<code>A.B.C+X</code>
 										<ul>
 											<li><b>A.B.C</b> stands for the version name, such as 1.0.0.</li>
-											<li><b>X</b> (the number after the +) stands for the version code, like 1, 2, 3, etc.</li>
+											<li><b>X</b> (the number after the +) stands for the version code, like 1,
+												2, 3, etc.</li>
 										</ul>
 									</li>
-									<li><b>Don't forget:</b> After completing these steps, remember to run <code>flutter pub get</code>.</li>
-								
+									<li><b>Don't forget:</b> After completing these steps, remember to run
+										<code>flutter pub get</code>.
+									</li>
+
 
 									<img src="images/version_1.webp" alt="eDemand" />
 									<br><br>
 
 									<ul>
 										<li>For iOS:</li>
-							
+
 										<li>Open your project in Xcode.</li>
 										<ol>
-										<li>Select "Runner" from the targets.</li>
-										<li>Select "General" from the list.</li>
-										<li>Check for the version and build:</li>
-										<ul>
-										  <li><strong>Version:</strong> Represents as 1.0.0.</li>
-										  <li><strong>Build:</strong> Represents as 1, 2, 3, etc.</li>
-										</ul>									  <img src="images/version_2.webp" alt="eDemand" />
-										<li>Select "Runner" from the targets.</li>
-										<li>Select "Build Settings" from the list.</li>
-										<li>Check for the FLUTTER_BUILD_NAME and FLUTTER_BUILD_NUMBER:</li>
-										<ul>
-										  <li><strong>FLUTTER_BUILD_NAME:</strong> Represents as 1.0.0.</li>
-										  <li><strong>FLUTTER_BUILD_NUMBER:</strong> Represents as 1, 2, 3, etc.</li>
-										</ul>										  <img src="images/version_3.webp" alt="eDemand" />
-</ol>
-									  </ul>
+											<li>Select "Runner" from the targets.</li>
+											<li>Select "General" from the list.</li>
+											<li>Check for the version and build:</li>
+											<ul>
+												<li><strong>Version:</strong> Represents as 1.0.0.</li>
+												<li><strong>Build:</strong> Represents as 1, 2, 3, etc.</li>
+											</ul> <img src="images/version_2.webp" alt="eDemand" />
+											<li>Select "Runner" from the targets.</li>
+											<li>Select "Build Settings" from the list.</li>
+											<li>Check for the FLUTTER_BUILD_NAME and FLUTTER_BUILD_NUMBER:</li>
+											<ul>
+												<li><strong>FLUTTER_BUILD_NAME:</strong> Represents as 1.0.0.</li>
+												<li><strong>FLUTTER_BUILD_NUMBER:</strong> Represents as 1, 2, 3, etc.
+												</li>
+											</ul> <img src="images/version_3.webp" alt="eDemand" />
+										</ol>
+									</ul>
 
 
 
@@ -358,13 +379,15 @@
 							<div class="container"> <br>
 								<h2>How to Change App Logo</h2>
 								<ol>
-								  <li>For Android, navigate to android > app > src > main > res > mipmap and add your logo here, ensuring it fits the device screen size.</li>
-								  <br>
-								  <img src="images/logo_1.webp" alt="eDemand">
-								  <br><br>
-								  <li>For iOS, navigate to ios > Runner > Assets.xcassets > AppIcon.appiconset. Here, you must place your logo in various sizes for different requirements.</li>
-								  <br>
-								  <img src="images/logo_2.webp" alt="eDemand">
+									<li>For Android, navigate to android > app > src > main > res > mipmap and add your
+										logo here, ensuring it fits the device screen size.</li>
+									<br>
+									<img src="images/logo_1.webp" alt="eDemand">
+									<br><br>
+									<li>For iOS, navigate to ios > Runner > Assets.xcassets > AppIcon.appiconset. Here,
+										you must place your logo in various sizes for different requirements.</li>
+									<br>
+									<img src="images/logo_2.webp" alt="eDemand">
 								</ol>
 								<div class="section_bdr"></div>
 								</ul>
@@ -375,14 +398,19 @@
 						<section id="appcolor">
 							<div class="container"> <br>
 								<h2>How to Change App Color</h2>
-    <ol>
-        <li>To change the color of your app, you need to add your color code in the file <b>colors.dart</b> located in <b>lib > utils</b>.</li>
-        <li>In Flutter, color codes always begin with <code>0xff</code>. After these four letters, you should add your color's hexadecimal code. Refer to the image below to see how you can adjust the primary, secondary, accent, and subheading colors for both light and dark themes.</li>
+								<ol>
+									<li>To change the color of your app, you need to add your color code in the file
+										<b>colors.dart</b> located in <b>lib > utils</b>.
+									</li>
+									<li>In Flutter, color codes always begin with <code>0xff</code>. After these four
+										letters, you should add your color's hexadecimal code. Refer to the image below
+										to see how you can adjust the primary, secondary, accent, and subheading colors
+										for both light and dark themes.</li>
 
-        <br>
-        <img src="images/appcolor.webp" alt="eDemand" />
-        <br><br>
-    </ol>
+									<br>
+									<img src="images/appcolor.webp" alt="eDemand" />
+									<br><br>
+								</ol>
 								<div class="section_bdr"></div>
 								</ul>
 							</div>
@@ -691,14 +719,16 @@
 
 
 
-						<section id="firebase_otp">
+						<section id="firebase_authentications">
 							<div class="container">
-								<h2>How to enable Firebase Phone Authentication(OTP).</h2>
+								<h2>How to enable Firebase Authentications.</h2>
 								<ol>
 									<li>Open your firebase console. </li>
 									<li>Go to Authentication and open Sign-in method.</li>
-									<li>Enable Phone Sign-in method and save.</li>
-									<br><img src="images/phone1.webp"></a><br><br>
+									<li>Click on Add new provider and select all these methods shown in the image below.
+									</li>
+
+									<br><img src="images/authentication.png"></a><br><br>
 									<li>Now, we have to add sha1 and sha256 key in firebase, for that perform below
 										given step </li>
 									<ol>
@@ -719,17 +749,7 @@
 											firebase console.and also add sha-256 to firebase console.</li><br>
 										<br /><img src="images/sha3.webp"></a><br><br>
 
-										<!--
-										<li>now enable SafetyNet for use with Firebase Authentication.In the Google
-											Cloud
-											Console, enable the <a
-												href="https://console.cloud.google.com/apis/library/androidcheck.googleapis.com?project=test-6f7bb&folder=&organizationId="
-												style="color:red">Android DeviceCheck API </a>for your project.first
-											make
-											sure your correct project is selected then press enable button.</li>
 
-										<br /><img src="images/device1.webp"></a><br><br>
--->
 										<h4>Remember: </h4>
 
 
@@ -751,7 +771,11 @@
 										</li>
 
 										<img src="images/sha4.webp"></a><br><br>
-										<li>for ios you need to set following.</li>
+										<h5>for ios you need to set following.</h5>
+										<li>In Xcode, select the Signing & Capabilities tab, and add "Sign In With
+											Apple" as a new Capability then select a team on the Code Signing section.
+										</li>
+										<img src="images/apple2.png"></a><br><br>
 										<h5>Add custom URL schemes to your Xcode project:</h5>
 										<ul>
 											<li>Open your project configuration: double-click the project name in the
@@ -934,7 +958,53 @@
 						</section>
 
 
-						<section id="link">
+						<section id="deeplink">
+
+							<div class="container">
+								<h2>How to setup Deeplink</h2>
+								<ol><br>
+									<li>First of all download this google files from the link : <a
+											href="https://drive.google.com/drive/folders/1LbSXPmTRvz6-VWdr4isJz9AE00p8ynJ6"
+											target="_blank" style="color:red">Server
+											Side Deeplink Files</a>
+									</li>
+									<li>Open both files in the any text editor and follow below steps</li>
+									<li></li><img src="images/deep-link-1.webp">
+									<li></li><img src="images/deep-link-2.webp">
+									<li>After above changes save both files (Note- Keep name proper same of both files)
+									</li>
+									<li>Open server > Go to admin panel root folder</li>
+									<li>You will get .well-known folder on root directory</li>
+									<li>If you dont get that folder from setting enable setting visible hidden files
+										then
+										check</li>
+									<li>After the change setting still you don't find the files, Create new directory
+										named
+										<a style="color:red">.well-known</a> (Makesure name starts with
+										dot[.])
+									</li>
+									<li>Add both above saved files inside the <a style="color:red">.well-known</a>
+										folder.
+									</li>
+									<li>In server > admin panel root folder you will get <a
+											style="color:red">.htaccess</a> file, Open it and do changes as
+										per
+										below image.</li>
+									<li></li><img src="images/deep-link-3.webp">
+									<li>For further steps open customer app code in android studio and follow below
+										steps.
+									</li>
+									<li></li><img src="images/deep-link-4.png">
+									<li></li><img src="images/deep-link-5.png">
+									<br><br>
+
+								</ol>
+								</p>
+							</div>
+							</ol>
+						</section>
+
+						<!-- <section id="link">
 							<div class="container">
 								<h2>How to create dynamic link</h2>
 								<ol>
@@ -988,7 +1058,7 @@
 								<div class="section_bdr"></div>
 								</ul>
 							</div>
-						</section>
+						</section> -->
 						<section id="map1">
 							<div class="container"> <br>
 								<h2>How to Add Map API key </h2>
@@ -1139,6 +1209,29 @@
 									<li>Go to Settings -> App setting </li><br>
 									<a href="#timeslot"><img src="images/currency_symbol.webp"></a><br><br>
 
+								</ol>
+								<div class="section_bdr"></div>
+							</div>
+						</section>
+
+
+						<section id="ad_mob">
+							<div class="container">
+								<h2>How to setup Google Ad Mob</h2>
+								<ol>
+									<li> If you want to disable google admob then you can disable from admin panel ->
+										settings -> app settings</li>
+									<li>Create android and iOS app in google admob account. You can create google admob
+										account from here. <a style="color: #ff0039;" target="_blank"
+											href="https://admob.google.com/home">https://admob.google.com</a></li>
+									<li>Create banner and interstitial ads and copy those ads id.</li>
+									<li> Paste those ads id in admin panel -> settings -> app settings.</li>
+									<img src="images/admob3.png">
+									<li>Add your Android Admob Ad Id in the AndroidManifest file at shown in velow image</li>
+									<img src="images/admob1.png">
+
+									<li>Add your ios Admob Ad Id in the info.plist file at shown in velow image</li>
+									<img src="images/admob2.png">
 								</ol>
 								<div class="section_bdr"></div>
 							</div>
