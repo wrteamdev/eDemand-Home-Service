@@ -51,6 +51,7 @@ sidebarToggler.addEventListener('click', () => {
 });
 
 
+
 /* ===== Smooth scrolling ====== */
 /*  Note: You need to include smoothscroll.min.js (smooth scroll behavior polyfill) on the page to cover some browsers */
 /* Ref: https://github.com/iamdustan/smoothscroll */
