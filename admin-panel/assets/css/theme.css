@@ -10178,7 +10178,7 @@ a.text-link:hover {
 .theme-icon-holder {
   display: inline-block;
   background: #f4fcf6;
-  color: #27c0fc;
+  color: #0277FA;
   width: 32px;
   height: 32px;
   padding-top: 4px;
@@ -10534,14 +10534,14 @@ a.text-link:hover {
   display: none;
 }
 .docs-nav .nav-item.active .nav-link {
-  color: #27c0fc;
+  color: #0277FA;
 }
 .docs-nav .nav-item.active .nav-link:before {
   background-color: #27c0fc;
 }
 .docs-nav .nav-item.active .nav-link .theme-icon-holder {
   color: #fff;
-  background: #27c0fc;
+  background: #0277FA;
 }
 .docs-nav .nav-link {
   display: inline-block;

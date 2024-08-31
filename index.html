@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>eDemand  App
-    </title>
     <link rel="shortcut icon" href="images/splash_logo.svg" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -14,152 +11,336 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <title>
+        eDemand - Multi Vendor On Demand Handy Services, Handyman with Flutter App | Admin panel | Web Version
+    </title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-        .background {
-            background-color: #193fa7;
-            color: #fff;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-
-        .button {
-            display: inline-block;
-            border-radius: 4px;
-           
-            border: none;
-            color: rgb(36, 38, 185);
-            text-align: center;
-            font-size: 28px;
-            height: 120px;
-            padding: 20px;
-            width: 250px;
-            transition: all 0.5s;
-            cursor: pointer;
-            margin: 5px;
+        body {
+            background-color: #F4F6F9;
         }
-
-        .button span {
-            cursor: pointer;
-            display: inline-block;
+        .main {
             position: relative;
-            transition: 0.5s;
-            font-size: 1.4rem;
+            margin-bottom: 205px;
         }
-
-        .button span:after {
-            content: '\00bb';
-            position: absolute;
-            opacity: 0;
-            top: 0;
-            right: -20px;
-            transition: 0.5s;
+        .footer {
+            z-index: 100;
+            background: #193FA7;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            cursor: pointer;
+            opacity: 0.9 !important;
         }
-
-        .button:hover span {
-            padding-right: 25px;
+        .footer a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
         }
-
-        .button:hover span:after {
-            opacity: 1;
-            right: 0;
-        }
-
-        .logo {
-            height: 100px;
-            object-fit: contain;
-            max-width: 100%;
-        }
-
-        .center {
+        .doc {
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            margin: 50px auto;
-
+            height: 100%;
+            padding: 350px 0;
         }
-
-        @media (max-width:480px) {
-            .header {
-                display: flex;
-                flex-direction: column;
-
+        @media only screen and (max-width:1980px) {
+            .doc {
+                padding: 100px 0;
             }
+        }
+        .doc .card {
+            margin-bottom: 20px;
+            border-radius: 15px;
+            background: #193FA7;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid white;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            text-transform: capitalize;
+            cursor: pointer;
+            padding: 40px;
+            opacity: 0.9;
+            /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 
-            h2 {
-                font-size: inherit;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+        .card a {
+            text-decoration: none;
+            color: white;
+        }
+        .circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .card:hover,
+        .card:focus,
+        .card:active,
+        .card:visited {
+            transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+            animation: gelatine 0.5s 1;
+        }
+        @keyframes gelatine {
+            0%,
+            100% {
+                transform: scale(1, 1);
             }
-
-            .center {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
+            25% {
+                transform: scale(0.9, 1.1);
             }
+            50% {
+                transform: scale(1.1, 0.9);
+            }
+            75% {
+                transform: scale(0.95, 1.05);
+            }
+        }
+        .circles li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background-color: #193FA7;
+            opacity: 0.3;
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+            z-index: -1;
+        }
+        .circles li:nth-child(1) {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+        .circles li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+        }
+        .circles li:nth-child(3) {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+        }
+        .circles li:nth-child(4) {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+        }
+        .circles li:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+        .circles li:nth-child(6) {
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+        }
+        .circles li:nth-child(7) {
+            left: 35%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 7s;
+        }
+        .circles li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+        }
+        .circles li:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+        }
+        .circles li:nth-child(10) {
+            left: 85%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+        }
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+            }
+        }
+        .main .title {
+            color: #ece0e0;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: 300px;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+        h2 {
+            color: black;
+        }
+        .footer {
+            background-color: #193FA7;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+        }
+        .social-media {
+            display: flex;
+            gap: 10px;
+        }
+        .social-icon i {
+            font-size: 20px;
+            color: white;
+        }
+        .social-icon:hover i {
+            opacity: 0.7;
+        }
+        .copyright p {
+            margin: 0;
+        }
+        .copyright a {
+            text-decoration: none;
+            color: white;
+        }
+        .copyright a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-
 <body>
-    <div class="background" style="padding-top: 30px;">
-        <div class="container background">
-            <table class="table">
-                <thead>
-                    <tr class="header">
-                        <th>
-                            <header> <span class="image avatar"><img style="height: 100px;" src="images/splash_logo.svg"
-                                        alt="Flutter UI Component" /></span>
-                            </header>
-                        </th>
-                        <th style="vertical-align: middle;">
-                            <h2 style="font-weight: bolder;">
-                                eDemand Documentation
-                            </h2>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
+    <section class="main">
+        <div class="doc">
+            <div class="container">
+                <div class="title">
+                    <h2> eDemand Documentation</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="card" onclick="window.open('./admin-panel/index.html','_blank');">
+                            <a>Admin Documentation</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="card" onclick="window.open('./web-documentation/index.html','_blank');">
+                            <a>Web Documentation</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="card" onclick="window.open('./flutter-app/index.html','_blank');">
+                            <a>App Documentation</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="card" onclick="window.open('./change-log/index.html','_blank');">
+                            <a>Change Log</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="card" onclick="window.open('./Features/index.html','_blank');">
+                            <a>Features</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="card" >
+                            <a href="https://join.skype.com/invite/wpO6RYDhElUY">Get Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="center">
-        <button class="button" style="vertical-align:middle"
-            onclick="location.href = 'flutter-app/index.html';"><span>Customer/Provider App</span></button>
-
-        <button class="button" style="vertical-align:middle"
-            onclick="location.href = 'admin-panel/index.html';"><span>Admin Panel</span></button>
-
-        <button class="button" style="vertical-align:middle"
-            onclick="location.href = 'web-documentation/index.html';"><span>Customer Web</span></button>
-           
-    </div>
-    <div class="center">
-    
-            <button class="button" style="vertical-align:middle"
-            onclick="location.href = 'change-log/index.html';"><span>Change log</span></button>
-
-            <button class="button" style="vertical-align:middle"
-            onclick="location.href = 'Features/index.html';"><span>Features</span></button>
-    </div>
-
-
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity">
-        <div class="w3-xlarge w3-padding-32">
-            <a href="https://www.facebook.com/wrteam.in"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-            <a href="https://www.instagram.com/wrteam.in"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-            <a href="https://dribbble.com/Asgar_WRTeam"><i class="fa fa-dribbble w3-hover-opacity"></i></a>
-            <a href="https://www.youtube.com/channel/UCLt9XRUuiWsqKng4681_6cQ"><i
-                    class="fa fa-youtube-play w3-hover-opacity" aria-hidden="true"></i></a>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.facebook.com/wrteam.in" target="_blank" class="social-icon">
+                    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                </a>
+                <a href="https://www.instagram.com/wrteam.in" target="_blank" class="social-icon">
+                    <i class="fa fa-instagram w3-hover-opacity"></i>
+                </a>
+                <a href="https://dribbble.com/Divy_WRTeam/shots" target="_blank" class="social-icon">
+                    <i class="fa fa-dribbble w3-hover-opacity"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCLt9XRUuiWsqKng4681_6cQ" target="_blank" class="social-icon">
+                    <i class="fa fa-youtube-play w3-hover-opacity" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                <p style="color: white;">&copy;
+                    <script>
+                        var CurrentYear = new Date().getFullYear();
+                        document.write(CurrentYear);
+                    </script> <a href="https://wrteam.in/">WRTeam</a>
+                </p>
+            </div>
         </div>
-
-        <p>&copy;
-            <script>
-                var CurrentYear = new Date().getFullYear()
-                document.write(CurrentYear)
-            </script> <a href="https://wrteam.in/">WRTeam</a>
-        </p>
     </footer>
-
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script src="./assets/js/custom.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 </body>
-
 </html>

@@ -3,33 +3,22 @@
 
 <head>
     <title>eDemand Documentation</title>
-
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="eDemand Documentation">
     <meta name="author" content="eDemand Documentation">
     <link rel="shortcut icon" href="../images/splash_logo.svg">
-
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome JS-->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
-
-    <!-- Plugins CSS -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
     <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
-
-    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
     <style>
         .image-doc {
-            width: 100%;
-            height: 400px;
-            object-fit: contain;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            border-radius: 8px;
         }
 
         .twenty {
@@ -38,6 +27,51 @@
 
         .title-img {
             height: 40px;
+        }
+
+        .docs-article {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            /* max-width: 800px; */
+            padding: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .docs-article:hover {
+            background-color: #ffffff;
+        }
+
+        .docs-header {
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .docs-heading {
+            color: #007BFF;
+            font-size: 2rem !important;
+            margin: 0;
+        }
+
+        .docs-intro {
+            margin: 20px 0;
+        }
+
+        .docs-intro ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        .docs-intro li {
+            margin-bottom: 10px;
+        }
+
+        .docs-intro p {
+            font-size: 1.1rem;
+            color: #555;
+            margin: 0;
         }
     </style>
 </head>
@@ -57,16 +91,11 @@
                                 src="assets/images/logo-eDemand.webp" alt="logo"><span class="logo-text"><span
                                     class="text-alt">Docs</span></span></a>
                     </div>
-
                 </div>
             </div>
-            <!--//container-->
         </div>
-        <!--//branding-->
     </header>
     <!--//header-->
-
-
     <div class="docs-wrapper">
         <div id="docs-sidebar" class="docs-sidebar">
             <div class="top-search-box d-lg-none p-3">
@@ -75,18 +104,12 @@
                     <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
                 </form>
             </div>
-            
             <nav id="docs-nav" class="docs-nav navbar">
                 <ul class="section-items list-unstyled nav flex-column pb-3">
-
-
-
-
                     <li class="nav-item section-title mt-3"><a class="nav-link " href="#server-requirement">
                             <span class="theme-icon-holder me-2"><i class="fas fa-wrench"></i></span>Server Requirement
                         </a>
                     </li>
-
                     <li class="nav-item section-title mt-3"><a class="nav-link " href="#section-2">
                             <span class="theme-icon-holder me-2"><i
                                     class="fas fa-arrow-down"></i></span>Installation</a>
@@ -110,40 +133,38 @@
                             &nbsp; Terms and Conditions</a></li>
                     <li class="nav-item"><a class="nav-link " href="#item-5-4"><i class="fas fa-dot-circle"></i>
                             &nbsp; Privacy Policy</a></li>
-
                     <li class="nav-item section-title mt-3"><a class="nav-link " href="#section-8"><span
                                 class="theme-icon-holder me-2"><i class="fas fa-money-bill-wave-alt"></i></span>Payment
                             Gateway Settings</a>
                     </li>
-
                     <li class="nav-item"><a class="nav-link " href="#item-8-1"><i class="fas fa-dot-circle"></i>
                             &nbsp;
                             Stripe</a></li>
-
                     <li class="nav-item"><a class="nav-link " href="#item-8-2"><i class="fas fa-dot-circle"></i>
                             &nbsp;
                             Razorpay</a></li>
-
                     <li class="nav-item"><a class="nav-link " href="#item-8-3"><i class="fas fa-dot-circle"></i>
                             &nbsp;
                             Paystack</a></li>
-
-
-
                     <li class="nav-item"><a class="nav-link " href="#item-8-4"><i class="fas fa-dot-circle"></i>
                             &nbsp;
                             Paypal</a></li>
-
+                    <li class="nav-item"><a class="nav-link " href="#item-8-5"><i class="fas fa-dot-circle"></i>
+                            &nbsp;
+                            Flutterwave</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link " href="#section-sms-gateway">
+                            <span class="theme-icon-holder me-2"><i class="fas fa-sms"></i></span>SMS Gateway
+                            Settings</a>
+                    </li>
                     <li class="nav-item section-title mt-3"><a class="nav-link " href="#item-12"><span
                                 class="theme-icon-holder me-2"><i class="fas fa-wrench"></i></span>Set Cron Job</a>
                     </li>
-
                     <li class="nav-item section-title mt-3"><a class="nav-link " href="#item-10-11"><span
                                 class="theme-icon-holder me-2"><i class="fas fa-wrench"></i></span>Auto Update</a>
                     </li>
 
-                </ul>
 
+                </ul>
             </nav>
             <!--//docs-nav-->
         </div>
@@ -152,44 +173,42 @@
             <div class="container">
                 <article class="docs-article">
                     <div class="callout-block callout-block-info">
-                      <div class="content">
-                        <h4 class="callout-title">
-                          <span class="callout-icon-holder mr-1">
-                            <i class="fas fa-info-circle"></i>
-                          </span>
-                          <!--//icon-holder-->
-                          Note
-                        </h4>
-                        <strong>
-                          We recommended for web deploy in main domain and admin panel
-                          in sub domain
-                        </strong>
-                    </br></br>
-                        <b>
-                            Whenever you seek support for WRTeam products via Skype or WhatsApp, please share your <a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code" target="_blank">purchase code</a> and Codecanyon username. This information is required for verification in our system. Without it, we are unable to provide support in accordance with Codecanyon policy.
-                        </b>
-                      </div>
-                      <!--//content-->
+                        <div class="content">
+                            <h4 class="callout-title">
+                                <span class="callout-icon-holder mr-1">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                                <!--//icon-holder-->
+                                Note
+                            </h4>
+                            <strong>
+                                We recommended for web deploy in main domain and admin panel
+                                in sub domain
+                            </strong>
+                            </br></br>
+                            <b>
+                                Whenever you seek support for WRTeam products via Skype or WhatsApp, please share your
+                                <a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code"
+                                    target="_blank">purchase code</a> and Codecanyon username. This information is
+                                required for verification in our system. Without it, we are unable to provide support in
+                                accordance with Codecanyon policy.
+                            </b>
+                        </div>
+                        <!--//content-->
                     </div>
-                  </article>
+                </article>
                 <article class="docs-article" id="server-requirement">
                     <header class="docs-header">
                         <h1 class="docs-heading">Server Requirement</h1>
                         <section class="docs-intro">
                             <ol>
-
                                 <li>
-
                                     <p> Php Version : 8.1</p>
                                 </li>
                                 <li>
-
                                     <p> Set max_upload_size to 100M in your php version</p>
                                 </li>
                             </ol>
-
-
-
                         </section>
                         <!--//docs-intro-->
                     </header>
@@ -204,9 +223,8 @@
                                     Login into you cPanel.
                                 </li>
                                 <div class="simplelightbox-gallery">
-                                    <a href="assets/images/cp-1.webp">
-
-                                        <img src="assets/images/cp-1.webp" class="image-doc">
+                                    <a href="assets/images/cp-1.webp" width="100%">
+                                        <img src="assets/images/cp-1.webp" width="100%" class="image-doc">
                                     </a>
                                 </div>
                                 <li>
@@ -214,8 +232,7 @@
                                 </li>
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/cp-2.webp">
-
-                                        <img src="assets/images/cp-2.webp" class="image-doc">
+                                        <img src="assets/images/cp-2.webp" width="100%" class="image-doc">
                                     </a>
                                 </div>
                                 <li>
@@ -224,8 +241,7 @@
                                 </li>
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/cp-3.webp">
-
-                                        <img src="assets/images/cp-3.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/cp-3.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <li>
@@ -233,8 +249,7 @@
                                 </li>
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/cp-4.webp">
-
-                                        <img src="assets/images/cp-4.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/cp-4.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <li>
@@ -242,8 +257,7 @@
                                 </li>
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/cp-5.webp">
-
-                                        <img src="assets/images/cp-5.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/cp-5.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <li>
@@ -251,8 +265,7 @@
                                 </li>
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/cp-6.webp">
-
-                                        <img src="assets/images/cp-6.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/cp-6.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <li>
@@ -263,8 +276,7 @@
                                 </li>
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/cp-7.webp">
-
-                                        <img src="assets/images/cp-7.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/cp-7.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <li>
@@ -273,7 +285,7 @@
                                 </li>
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/cp-8.webp">
-                                        <img src="assets/images/cp-8.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/cp-8.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <li>
@@ -283,7 +295,7 @@
                                 </li>
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/cp-9.webp">
-                                        <img src="assets/images/cp-9.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/cp-9.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <li>
@@ -293,7 +305,7 @@
                                 </li>
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/cp-10.webp">
-                                        <img src="assets/images/cp-10.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/cp-10.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <li>
@@ -306,7 +318,7 @@
                                 </li>
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/installer.webp">
-                                        <img src="assets/images/installer.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/installer.webp" class="image-doc">
                                     </a>
                                 </div>
                                 </p>
@@ -370,8 +382,7 @@
                                 </div>
                                 <div class="simplelightbox-gallery">
                                     <br><a href="assets/images/fb-1.webp">
-
-                                        <img src="assets/images/fb-1.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/fb-1.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <div>
@@ -382,12 +393,10 @@
                                 </div>
                                 <div class="simplelightbox-gallery">
                                     <br><a href="assets/images/fb-2.webp">
-
-                                        <img src="assets/images/fb-2.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/fb-2.webp" class="image-doc">
                                     </a>
                                     <br><br><a href="assets/images/fb-3.webp">
-
-                                        <img src="assets/images/fb-3.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/fb-3.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <div>
@@ -396,8 +405,7 @@
                                 </div>
                                 <div class="simplelightbox-gallery">
                                     <br><a href="assets/images/fb-4.webp">
-
-                                        <img src="assets/images/fb-4.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/fb-4.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <div>
@@ -405,8 +413,7 @@
                                 </div>
                                 <div class="simplelightbox-gallery">
                                     <br><a href="assets/images/fb-5.webp">
-
-                                        <img src="assets/images/fb-5.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/fb-5.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <div>
@@ -414,8 +421,7 @@
                                 </div>
                                 <div class="simplelightbox-gallery">
                                     <br><a href="assets/images/fb-6.webp">
-
-                                        <img src="assets/images/fb-6.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/fb-6.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <div>
@@ -424,24 +430,19 @@
                                     -> In "Authorized domains", localhost and a Firebase domain are automatically
                                     added.
                                     -> Here we've to add domain name without http:// and https://
-
                                 </div>
                                 <div class="simplelightbox-gallery">
                                     <br><a href="assets/images/fb-8.webp">
-                                        <img src="assets/images/fb-8.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/fb-8.webp" class="image-doc">
                                     </a>
                                 </div>
                                 <div>
                                     <br>J.Goto Project settings in firebase dashboard option.,
                                     <br><br>
                                     <a href="assets/images/fb-9.webp">
-                                        <img src="assets/images/fb-9.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/fb-9.webp" class="image-doc">
                                     </a>
-
-
                                 </div>
-
-
                                 <div>
                                     <br>K.Goto Project settings and scroll down you will find created web App there
                                     you find config option that will have firebase
@@ -449,68 +450,56 @@
                                     <br><br>
                                     L.here you have to set all details
                                     <a href="assets/images/fb-12.webp">
-                                        <img src="assets/images/fb-12.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/fb-12.webp" class="image-doc">
                                     </a>
                                 </div>
-
-
                                 <div>
                                     <br>
-
                                     M.You need to set this details in eDemand admin panel -> Firebase Settings Page
                                     from Settings page
                                     <br><br>
                                     <a href="assets/images/firebase_setting.webp">
-                                        <img src="assets/images/firebase_setting.webp" class="image-doc">
+                                        <img width="100%" src="assets/images/firebase_setting.webp" class="image-doc">
                                     </a>
-
-
-
-                                <div>
-
-                                    <br>
-                                    <br>
-                                    <u>  Where to find Vapid key</u>
-                                    <ol>
-                                        <li>Open the Cloud Messaging tab of the Firebase console Settings pane and
-                                            scroll to the Web configuration section.</li>
-                                        <li>In the Web Push certificates tab, click Generate Key Pair. The console
-                                            displays a notice that the key pair was generated, and displays the public
-                                            key string and date added.</li>
-                                    </ol>
-
-                                    Or look at steps by steps images below
-
-                                    <ol>
-                                        <li>Open Project settings
-                                            <a href="assets/images/features/vapidKey1.png">
-                                                <img src="assets/images/features/vapidKey1.png" class="image-doc">
-                                            </a>
-                                        </li>
-
-                                        <li>
-
-                                            Choose Cloud Messaging, scroll down to Web configuration. In Web Push
-                                            certificates you can find Vapid key ( If it doesn't exists, click Generate
-                                            Key Pair to create )
-                                            <a href="assets/images/features/VapidKey2.png">
-                                                <img src="assets/images/features/VapidKey2.png" class="image-doc">
-                                            </a>
-                                            <br>
-                                            <br>
-                                            <a href="assets/images/features/vapidKey3.png">
-                                                <img src="assets/images/features/vapidKey3.png" class="image-doc">
-                                            </a>
-                                        </li>
-
-                                    </ol>
+                                    <div>
+                                        <br>
+                                        <br>
+                                        <u> Where to find Vapid key</u>
+                                        <ol>
+                                            <li>Open the Cloud Messaging tab of the Firebase console Settings pane and
+                                                scroll to the Web configuration section.</li>
+                                            <li>In the Web Push certificates tab, click Generate Key Pair. The console
+                                                displays a notice that the key pair was generated, and displays the
+                                                public
+                                                key string and date added.</li>
+                                        </ol>
+                                        Or look at steps by steps images below
+                                        <ol>
+                                            <li>Open Project settings
+                                                <a href="assets/images/features/vapidKey1.png">
+                                                    <img width="100%" src="assets/images/features/vapidKey1.png"
+                                                        class="image-doc">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                Choose Cloud Messaging, scroll down to Web configuration. In Web Push
+                                                certificates you can find Vapid key ( If it doesn't exists, click
+                                                Generate
+                                                Key Pair to create )
+                                                <a href="assets/images/features/VapidKey2.png">
+                                                    <img width="100%" src="assets/images/features/VapidKey2.png"
+                                                        class="image-doc">
+                                                </a>
+                                                <br>
+                                                <br>
+                                                <a href="assets/images/features/vapidKey3.png">
+                                                    <img width="100%" src="assets/images/features/vapidKey3.png"
+                                                        class="image-doc">
+                                                </a>
+                                            </li>
+                                        </ol>
+                                    </div>
                                 </div>
-
-                                </div>
-
-
-
-
                                 <div>
                                     <br>
                                     N.You need to set this details in firebase-messaging-sw.js file
@@ -542,41 +531,33 @@
                                         <br><br>
                                         View firebase-messaging-sw.js
                                         and put content in file
-                                
                                     </a>
                                 </div>
-
-
-
-
                                 <div>
                                     <br>
                                     <b><u>Note::</u></b> Upload json file In firebase configuration
                                     <br> <br>
                                     <a href="assets/images/generate-key.png">
-                                        <img src="assets/images/generate-key.png" class="image-doc">
+                                        <img width="100%" src="assets/images/generate-key.png" class="image-doc">
                                     </a>
                                     <br> <br>
                                     <a
                                         href="assets/images/Firebase-Settings-Admin-Panel-—-eDemand-On-Demand-Services.png">
-                                        <img src="assets/images/Firebase-Settings-Admin-Panel-—-eDemand-On-Demand-Services.png"
+                                        <img width="100%"
+                                            src="assets/images/Firebase-Settings-Admin-Panel-—-eDemand-On-Demand-Services.png"
                                             class="image-doc">
                                     </a>
-
                                 </div>
                         </section>
                         <!--//docs-intro-->
                     </header>
                 </article>
-
                 <!--//docs-article-->
-
                 <article class="docs-article" id="section-5">
                     <header class="docs-header">
                         <h1 class="docs-heading">Configure eDemand</h1>
                         <section class="docs-intro">
                             <div class="callout-block callout-block-info">
-
                                 <div class="content">
                                     <h4 class="callout-title">
                                         <span class="callout-icon-holder me-1">
@@ -588,7 +569,6 @@
                                                     d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
                                                 </path>
                                             </svg>
-
                                         </span>
                                         <!--//icon-holder-->
                                         Note
@@ -601,7 +581,6 @@
                             <p>
                                 Use the given guide to configure and customize
                                 eDemand as you need.
-
                             </p>
                             <p>
                                 Login as admin by
@@ -611,13 +590,13 @@
                                     Login</li>
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/login.webp">
-                                        <img src="assets/images/login.webp" class="image-doc" alt="">
+                                        <img width="100%" src="assets/images/login.webp" class="image-doc" alt="">
                                     </a>
                                 </div>
                                 <li>Great! You have logged in as Admin.</li>
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/dashboard.webp">
-                                        <img src="assets/images/dashboard.webp" class="image-doc" alt="">
+                                        <img width="100%" src="assets/images/dashboard.webp" class="image-doc" alt="">
                                     </a>
                                 </div>
                                 <li>
@@ -625,7 +604,6 @@
                                     eDemand.
                                 </li>
                             </ol>
-
                         </section>
                         <!--//docs-intro-->
                     </header>
@@ -641,7 +619,7 @@
                         </p>
                         <div class="simplelightbox-gallery">
                             <a href="assets/images/general_setting.webp">
-                                <img src="assets/images/general_setting.webp" class="image-doc" alt="">
+                                <img width="100%" src="assets/images/general_setting.webp" class="image-doc" alt="">
                             </a>
                         </div>
                     </section>
@@ -652,7 +630,7 @@
                         <ol>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/api_key_setting.webp">
-                                    <img src="assets/images/api_key_setting.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/api_key_setting.webp" class="image-doc" alt="">
                                 </a>
                                 <li>Google Map API KEY : <a class="nav-link scrollto" href="#item-9-1"><svg
                                             class="svg-inline--fa fa-key fa-w-16" aria-hidden="true" focusable="false"
@@ -676,7 +654,7 @@
                         </p>
                         <div class="simplelightbox-gallery">
                             <a href="assets/images/email.webp">
-                                <img src="assets/images/email.webp" class="image-doc" alt="">
+                                <img width="100%" src="assets/images/email.webp" class="image-doc" alt="">
                             </a>
                         </div>
                         <ol>
@@ -689,7 +667,6 @@
                         </ol>
                     </section>
                     <!--//section-->
-
                     <section class="docs-section" id="item-5-3">
                         <h2 class="section-heading">Terms And Conditions</h2>
                         <p>
@@ -702,11 +679,10 @@
                         </ol>
                         <div class="simplelightbox-gallery">
                             <a href="assets/images/terms_and_condition.webp">
-                                <img src="assets/images/terms_and_condition.webp" class="image-doc" alt="">
+                                <img width="100%" src="assets/images/terms_and_condition.webp" class="image-doc" alt="">
                             </a>
                         </div>
                     </section>
-
                     <section class="docs-section" id="item-5-4">
                         <h2 class="section-heading">Privacy Policy</h2>
                         <p>
@@ -719,17 +695,12 @@
                         </ol>
                         <div class="simplelightbox-gallery">
                             <a href="assets/images/privacy_policy.webp">
-                                <img src="assets/images/privacy_policy.webp" class="image-doc" alt="">
+                                <img width="100%" src="assets/images/privacy_policy.webp" class="image-doc" alt="">
                             </a>
                         </div>
                     </section>
-
-
                 </article>
                 <!--//docs-article-->
-
-
-
                 <article class="docs-article" id="section-8">
                     <header class="docs-header">
                         <h1 class="docs-heading">Payment Gateway Settings.</h1>
@@ -743,56 +714,59 @@
                         <!--//docs-intro-->
                     </header>
                     <section class="docs-section" id="item-8-1">
-                        <h2 class="section-heading"> Stripe</h2>
+                        <h2 class="section-heading"><img src="assets/images/stripe_icon.svg" class="title-img" alt="">
+                            Strpe</h2>
                         <p>
                         <ol>
                             <li>Go to <a href="https://dashboard.stripe.com/login" target="_blank">
                                     https://dashboard.stripe.com/login</a>
                                 and sign in with your Stripe account</li>
-
                             <li>Sign in with your account</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/stripe1.webp">
-                                    <img src="assets/images/stripe1.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/stripe1.webp" class="image-doc" alt="">
                                 </a>
                             </div>
                             <li>Click on Developers on top right of the
                                 browser</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/stripe2.webp">
-                                    <img src="assets/images/stripe2.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/stripe2.webp" class="image-doc" alt="">
                                 </a>
                             </div>
                             <li>Click Api keys on left Navigation bar</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/stripe3.webp">
-                                    <img src="assets/images/stripe3.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/stripe3.webp" class="image-doc" alt="">
                                 </a>
                             </div>
                             <li>Click Reveal Key and copy Publishable key
                                 and Secret Key.</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/stripe4.webp">
-                                    <img src="assets/images/stripe4.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/stripe4.webp" class="image-doc" alt="">
                                 </a>
                             </div>
                             <li>Paste all Stripe Credentials here. (settings
                                 -> Payment Gateway Settings)</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/stripe_payment_gateway.webp">
-                                    <img src="assets/images/stripe_payment_gateway.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/stripe_payment_gateway.png" class="image-doc"
+                                        alt="">
                                 </a>
                             </div>
                             <li>
                                 Set Webhook
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/stripe_webhook.webp">
-                                        <img src="assets/images/stripe_webhook.webp" class="image-doc" alt="">
+                                        <img width="100%" src="assets/images/stripe_webhook.webp" class="image-doc"
+                                            alt="">
                                     </a>
                                 </div>
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/stripe_add_webhook.webp">
-                                        <img src="assets/images/stripe_add_webhook.webp" class="image-doc" alt="">
+                                        <img width="100%" src="assets/images/stripe_add_webhook.webp" class="image-doc"
+                                            alt="">
                                     </a>
                                 </div>
                             </li>
@@ -800,9 +774,8 @@
                         </p>
                     </section>
                     <!--//section-->
-
                     <section class="docs-section" id="item-8-2">
-                        <h2 class="section-heading"><img src="assets/images/razorpay.webp" class="title-img" alt="">
+                        <h2 class="section-heading"><img src="assets/images/razorpay_icon.svg" class="title-img" alt="">
                             Razorpay</h2>
                         <p>
                         <ol>
@@ -811,64 +784,63 @@
                                 and sign in with your Razorpay account</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/rp.webp">
-                                    <img src="assets/images/rp.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/rp.webp" class="image-doc" alt="">
                                 </a>
                             </div>
                             <li>Click Settings</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/rp1.webp">
-                                    <img src="assets/images/rp1.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/rp1.webp" class="image-doc" alt="">
                                 </a>
                             </div>
                             <li>Click Api keys</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/rp2.webp">
-                                    <img src="assets/images/rp2.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/rp2.webp" class="image-doc" alt="">
                                 </a>
                             </div>
                             <li>Genetare new key or regenerate key and copy
                                 it.</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/rp3.webp">
-                                    <img src="assets/images/rp3.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/rp3.webp" class="image-doc" alt="">
                                 </a>
                             </div>
-
-
                             <li>Paste all Razorpay Credentials here.
                                 (settings -> Payment Gateway Settings)</li>
                             <div class="simplelightbox-gallery">
-                                <a href="assets/images/razorpay_payment_gateway.webp">
-                                    <img src="assets/images/razorpay_payment_gateway.webp" class="image-doc" alt="">
+                                <a href="assets/images/razorpay_payment_gateway.png">
+                                    <img width="100%" src="assets/images/razorpay_payment_gateway.png" class="image-doc"
+                                        alt="">
                                 </a>
                             </div>
-
                             <li>Set Webhook
-
                                 <div class="simplelightbox-gallery">
                                     <a href="assets/images/razorpay_webhook1.webp">
-                                        <img src="assets/images/razorpay_webhook1.webp" class="image-doc" alt="">
+                                        <img width="100%" src="assets/images/razorpay_webhook1.webp" class="image-doc"
+                                            alt="">
                                     </a>
                                 </div>
                                 <div class="simplelightbox-gallery mt-2">
                                     <a href="assets/images/razorpay_webhook2.webp">
-                                        <img src="assets/images/razorpay_webhook2.webp" class="image-doc" alt="">
+                                        <img width="100%" src="assets/images/razorpay_webhook2.webp" class="image-doc"
+                                            alt="">
                                     </a>
                                 </div>
                                 <div class="simplelightbox-galler mt-2">
                                     <a href="assets/images/razorpay_webhook3.webp">
-                                        <img src="assets/images/razorpay_webhook3.webp" class="image-doc" alt="">
+                                        <img width="100%" src="assets/images/razorpay_webhook3.webp" class="image-doc"
+                                            alt="">
                                     </a>
                                 </div>
-
                             </li>
                         </ol>
                         </p>
                     </section>
                     <!--//section-->
-
                     <section class="docs-section" id="item-8-3">
-                        <h2 class="section-heading"> <img src="assets/images/paystack.webp" class="title-img" alt="">
+                        <h2 class="section-heading"> <img src="assets/images/paystack_icon.svg" class="title-img"
+                                alt="">
                             Paystack</h2>
                         <p>
                         <ol>
@@ -877,123 +849,206 @@
                                 and sign in with your Paystack account</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/ps.webp">
-                                    <img src="assets/images/ps.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/ps.webp" class="image-doc" alt="">
                                 </a>
                             </div>
                             <li>Click settings and click API Keys & Webhooks
                             </li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/ps1.webp">
-                                    <img src="assets/images/ps1.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/ps1.webp" class="image-doc" alt="">
                                 </a>
                             </div>
                             <li>Copy Credentials</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/ps2.webp">
-                                    <img src="assets/images/ps2.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/ps2.webp" class="image-doc" alt="">
                                 </a>
                             </div>
-
-
-
                             <li>Paste all Paystack Credentials here.
                                 (settings -> Payment Gateway Settings)</li>
                             <div class="simplelightbox-gallery">
-                                <a href="assets/images/paystack_payment_gateway.webp">
-                                    <img src="assets/images/paystack_payment_gateway.webp" class="image-doc" alt="">
+                                <a href="assets/images/paystack_payment_gateway.png">
+                                    <img width="100%" src="assets/images/paystack_payment_gateway.png" class="image-doc"
+                                        alt="">
                                 </a>
                             </div>
-
                             <li>Set Webhook
-
                                 <div class="simplelightbox-galler mt-2">
                                     <a href="assets/images/paystack_webhook.webp">
-                                        <img src="assets/images/paystack_webhook.webp" class="image-doc" alt="">
+                                        <img width="100%" src="assets/images/paystack_webhook.webp" class="image-doc"
+                                            alt="">
                                     </a>
                                 </div>
-
                             </li>
                         </ol>
                         </p>
                     </section>
-
-
                     <section class="docs-section" id="item-8-4">
-                        <h2 class="section-heading"> <img src="assets/images/paypal.webp" class="title-img" alt="">
+                        <h2 class="section-heading"> <img src="assets/images/paypal_icon.svg" class="title-img" alt="">
                             Paypal</h2>
                         <p>
                         <ol>
                             <li>Login to Paypal Dashboard</li>
-
                             <li>Go to Account Settings -> Account Owner Information
                             </li>
-
                             <li>click on update in email section</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/paypalkey1.webp">
-                                    <img src="assets/images/paypalkey1.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/paypalkey1.webp" class="image-doc" alt="">
                                 </a>
                             </div>
                             here is your business email
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/paypalkeys2.webp">
-                                    <img src="assets/images/paypalkeys2.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/paypalkeys2.webp" class="image-doc" alt="">
                                 </a>
                             </div>
-
                             <li>Paste all Paypal Credentials here.
                                 (settings -> Payment Gateway Settings)</li>
                             <div class="simplelightbox-gallery">
-                                <a href="assets/images/paypal_payment_gateway_setting.webp">
-                                    <img src="assets/images/paypal_payment_gateway_setting.webp" class="image-doc"
-                                        alt="">
+                                <a href="assets/images/paypal_payment_gateway_setting.png">
+                                    <img width="100%" src="assets/images/paypal_payment_gateway_setting.png"
+                                        class="image-doc" alt="">
                                 </a>
                             </div>
                         </ol>
-
                         <h3>Paypal Webhook Settings</h3>
-
                         <ol>
                             <li>Login to Paypal Dashboard</li>
                             <li>Click Profile Settings</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/paypal_step1.webp">
-                                    <img src="assets/images/paypal_step1.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/paypal_step1.webp" class="image-doc" alt="">
                                 </a>
                             </div>
                             <li>Go to Website Payments -> instant payment notification</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/paypal_step2.webp">
-                                    <img src="assets/images/paypal_step2.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/paypal_step2.webp" class="image-doc" alt="">
                                 </a>
                             </div>
-
-
-
                             <li>click Edit Settings</li>
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/paypal_step3.webp">
-                                    <img src="assets/images/paypal_step3.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/paypal_step3.webp" class="image-doc" alt="">
                                 </a>
                             </div>
                             Copy paypal Webhook from Admin panel
-
                             Settings->System Settings and paste here
-
                             <div class="simplelightbox-gallery">
                                 <a href="assets/images/paypal_step4.webp">
-                                    <img src="assets/images/paypal_step4.webp" class="image-doc" alt="">
+                                    <img width="100%" src="assets/images/paypal_step4.webp" class="image-doc" alt="">
                                 </a>
                             </div>
                         </ol>
-
-
                         </p>
                     </section>
-
-
-
+                    <section class="docs-section" id="item-8-5">
+                        <h2 class="section-heading"> <img src="assets/images/flutterwave_icon.svg" class="title-img"
+                                alt="">
+                            Flutterwave</h2>
+                        <p>
+                        <ol>
+                            <li>Go to <a href="https://flutterwave.com/us/">Flutterwave</a> and sign in with your
+                                Flutterwave account
+                            </li>
+                            <li>Go to Developers -> API Keys
+                            </li>
+                            <li>Copy these Credentials and paste in Admin panel</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/flutterwave_1.png">
+                                    <img width="100%" src="assets/images/flutterwave_1.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>Set Webhook
+                                <div class="simplelightbox-galler mt-2">
+                                    <a href="assets/images/flutterwave_webhook.png">
+                                        <img width="100%" src="assets/images/flutterwave_webhook.png" class="image-doc"
+                                            alt="">
+                                    </a>
+                                </div>
+                            </li>
+                            <li>Paste all Flutterwave Credentials here.
+                                (settings -> Payment Gateway Settings)</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/flutterwave_payment_gateway_setting.png">
+                                    <img width="100%" src="assets/images/flutterwave_payment_gateway_setting.png"
+                                        class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </ol>
+                        </p>
+                    </section>
                     <!--//section-->
+                </article>
+                <article class="docs-article" id="section-sms-gateway">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">SMS Gateway Settings </h1>
+                        <section class="docs-intro">
+                            <ol>
+                                <li>Login to <a href="https://console.twilio.com/">Twilio</a></li>
+                                <li>Firstly open your sms gateway account . You can find api keys in your account -> API
+                                    keys & credentials -> create api key</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/twilio_2.png">
+                                        <img width="100%" src="assets/images/twilio_2.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>
+                                    After create key you can see here Account sid and auth token
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/twilio_1.png">
+                                        <img width="100%" src="assets/images/twilio_1.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>For Base url Messaging -> Send an SMS
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/twilio_3.png">
+                                        <img width="100%" src="assets/images/twilio_3.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>
+                                    check this for admin panel settings
+                                    <ul>
+                                        <li>
+                                            <div class="simplelightbox-gallery">
+                                                <a href="assets/images/twilio_7.png">
+                                                    <img width="100%" src="assets/images/twilio_7.png" class="image-doc"
+                                                        alt="">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-md-6 mr-3">
+                                                    <div class="simplelightbox-gallery">
+                                                        <a href="assets/images/twilio_6.png">
+                                                            <img width="100%" src="assets/images/twilio_6.png"
+                                                                class="image-doc" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="simplelightbox-gallery">
+                                                        <a href="assets/images/twilio_4.png">
+                                                            <img width="100%" src="assets/images/twilio_4.png"
+                                                                class="image-doc" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Make sure you entered valid data as per instructions before proceed
+                                </li>
+                            </ol>
+                        </section>
+                    </header>
                 </article>
                 <!--//section-->
                 <section class="docs-section" id="item-9-1">
@@ -1010,7 +1065,6 @@
                                                 d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
                                             </path>
                                         </svg>
-
                                     </span>
                                     Note
                                 </h4>
@@ -1018,7 +1072,6 @@
                                         its
                                         not dispalying the map thn you had miss some step on google console so
                                         please do proper setup for key. </strong></p>
-
                             </div>
                         </div>
                         <div class="callout-block callout-block-info">
@@ -1032,7 +1085,6 @@
                                                 d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
                                             </path>
                                         </svg>
-
                                     </span>
                                     Note
                                 </h4>
@@ -1041,13 +1093,12 @@
                                 <br>
                                 <p><strong>Installation and map setup is out of the scope.Please note it
                                         down.</strong></p>
-
                             </div>
                         </div>
                         <li>First step is to go to google developer console and follow this offical
                             documentation of
                             google. </li>
-                        <li>While following this Offical Documentation there you need to enable  API You
+                        <li>While following this Offical Documentation there you need to enable API You
                             need to
                             enable <p class="text text-primary"> 1) Javascript Map API </p> these API</li>
                         <p> <a href="https://developers.google.com/maps/documentation/javascript/cloud-setup"
@@ -1074,7 +1125,6 @@
                                                 d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
                                             </path>
                                         </svg>
-
                                     </span>
                                     Note
                                 </h4>
@@ -1098,99 +1148,80 @@
                         </ul>
                     </ol>
                 </section>
-
                 <section class="docs-section mb-4" id="item-12">
-
                     <h3>Set Cron Job in your server</h3>
-
                     <p>
                         You can find your cron job url from admin panel
                     </p>
                     <a href="assets/images/cron_jon1.webp">
-
-                        <img src="assets/images/cron_jon1.webp" class="image-doc" alt="" style="margin-bottom: 15px">
+                        <img width="100%" src="assets/images/cron_jon1.webp" class="image-doc" alt=""
+                            style="margin-bottom: 15px">
                     </a>
                     <a href="assets/images/cron_job2.webp">
-
-                        <img src="assets/images/cron_job2.webp" class="image-doc" alt=" " style="margin-bottom: 15px">
+                        <img width="100%" src="assets/images/cron_job2.webp" class="image-doc" alt=" "
+                            style="margin-bottom: 15px">
                     </a>
                     <p>
-
                         Why Use a Cron Job:
                         Imagine a task that needs to be done every day, like changing subscription statuses. A
                         cron job is like a helpful robot that does this task automatically at the same time each
                         day. This makes sure things are accurate and saves you time.
                         How to Set Up a Cron Job:
                     </p>
-
                     <li>
-
                         Step 1: Log into cPanel:
                         Open your web browser and enter your cPanel URL. Log in using your credentials.
                     </li>
                     <li>
-
                         Step 2: Navigate to Cron Jobs:
                         Search for “Cron Jobs” in the cPanel search bar, or scroll down to the “Advanced”
                         section and find “Cron Jobs.” Click on it.
                     </li>
                     <li>
-
                         Step 3: Choose Add New Cron Job:
                         You’ll see a list of current cron jobs. Scroll down to the “Add New Cron Job” section.
                     </li>
                     <li>
-
                         Step 4: Set the Timing:
                         For our specific case, since we want to change the subscription status at midnight,
                         select “Every day” and set the time to 12:00 AM (midnight).
                     </li>
                     <li>
-
                         Step 5: Add the Command:
                         In the “Command” field, enter the full URL of the script or file you want to run as the
                         cron job. This is the URL of the task you want to automate. <b>(Ex :
                             https://edemand.wrteam.me/update_subscription_status)</b>
                     </li>
                     <li>
-
                         Step 6: Save the Cron Job:
                         Click the “Add New Cron Job” button to save your settings.
                     </li>
                     <li>
-
                         Step 7: Confirm Cron Job:
                         You’ll see a confirmation message that your cron job has been added. Double-check the
                         details to make sure everything is correct.
                     </li>
                     <li>
-
                         Step 8: Test the Cron Job:
                         To make sure the cron job is working as expected, you can test it. You might need to
                         wait until the scheduled time for the test.
                     </li>
                     <li>
-
                         Step 9: Edit or Delete Cron Jobs:
                         If you need to change or remove a cron job, you can do so from the same “Cron Jobs”
                         section in cPanel.
                     </li>
                 </section>
-
                 <section class="docs-section" id="item-10-11">
                     <!-- start auto update -->
                     <h2 class="section-heading">Auto Update</h2>
-
-
                     <div class="simplelightbox-gallery">
                         <a href="assets/images/updater.webp">
-                            <img src="assets/images/updater.webp" class="image-doc" alt="">
+                            <img width="100%" src="assets/images/updater.webp" class="image-doc" alt="">
                         </a>
                     </div>
-
-
                     <!-- <h1 id="update"><a href="#update">Auto Update</a></h1> -->
-                    <h3>How to auto update your admin panel or web version to latest version?</h3>
+                    <h3 class="mt-4">How to auto update your admin panel or web version to latest version?</h3>
                     <div class="alert alert-warning"><b>Note</b> : If you are upgrading your from very old
                         version then
                         please update the system in sequence one after the another. Don't skip any version in
@@ -1209,9 +1240,6 @@
                         <li>Click on that Update Button. </li>
                         <li>That's all. You have successfully updated your system from older version to newer
                             one.</li>
-
-
-
                     </ol>
                     <!-- end auto update -->
                 </section>
@@ -1219,8 +1247,6 @@
         </div>
     </div>
     <!--//docs-wrapper-->
-
-
     <!-- Javascript -->
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -1232,7 +1258,6 @@
     <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
     <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
     <script src="assets/js/docs.js"></script>
-
 </body>
 
 </html>
