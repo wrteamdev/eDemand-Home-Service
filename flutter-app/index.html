@@ -1014,6 +1014,17 @@
 										per
 										below image.</li>
 									<li></li><img src="images/deep-link-3.webp">
+									<p>If you didn't find the code in your .htaccess file then copy the below code and paste it in your file and make necessary changes</p>
+									<code>
+									# 300 Redirections
+									    # Redirect for Android devices
+									    RewriteCond %{HTTP_USER_AGENT} (Android) [NC]
+									    RewriteRule ^.*/provider/.*$ YOUR_CUSTOMER_ANDROID_APP_LINK [R=301,L]
+									    # Add more redirections here as needed...
+									    # Redirect for iPhone/iPad devices
+									    RewriteCond %{HTTP_USER_AGENT} (iPhone|iPad) [NC]
+									    RewriteRule ^.*/provider/.*$ YOUR_CUSTOMER_IOS_APP_LINK [R=302,L]
+									</code>
 									<li>For further steps open customer app code in android studio and follow below
 										steps.
 									</li>
