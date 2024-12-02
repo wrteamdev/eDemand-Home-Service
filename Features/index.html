@@ -25,6 +25,8 @@
             width: 100%;
             height: 400px;
             object-fit: contain;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            border-radius: 8px;
         }
         .twenty {
             height: 20px;
@@ -33,41 +35,41 @@
             height: 40px;
         }
     </style>
-<style>
-    .image-doc {
-        width: 100%;
-        height: 400px;
-        object-fit: contain;
-        animation: fadeIn 2s ease-in-out;
-    }
-    .twenty {
-        height: 20px;
-    }
-    .title-img {
-        height: 40px;
-    }
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
+    <style>
+        .image-doc {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            animation: fadeIn 2s ease-in-out;
         }
-        100% {
-            opacity: 1;
+        .twenty {
+            height: 20px;
         }
-    }
-    @keyframes slideInUp {
-        0% {
-            transform: translateY(20px);
-            opacity: 0;
+        .title-img {
+            height: 40px;
         }
-        100% {
-            transform: translateY(0);
-            opacity: 1;
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
-    }
-    .docs-heading {
-        animation: slideInUp 1s ease-in-out;
-    }
-</style>
+        @keyframes slideInUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .docs-heading {
+            animation: slideInUp 1s ease-in-out;
+        }
+    </style>
 </head>
 <body class="docs-page">
     <header class="header fixed-top">
@@ -269,10 +271,20 @@
                             <span class="theme-icon-holder me-2"><i class="far fa-dot-circle"></i></span>OTP System
                             Module
                         </a>
-                    <li class="nav-item section-title mt-3"><a class="nav-link " href="#booking_auto_cancle_duration 
-                        ">
+                    <li class="nav-item section-title mt-3"><a class="nav-link " href="#booking_auto_cancle_duration ">
                             <span class="theme-icon-holder me-2"><i class="far fa-dot-circle"></i></span>Booking auto
                             cancle Duration
+                        </a>
+                    </li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link " href="#custom_job_request">
+                            <span class="theme-icon-holder me-2"><i class="far fa-dot-circle"></i></span>Custom Job
+                            Request
+                        </a>
+                    </li>
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link " href="#post_booking_charges">
+                            <span class="theme-icon-holder me-2"><i class="far fa-dot-circle"></i></span>Post-Booking
+                            Charges
                         </a>
                     </li>
                 </ul>
@@ -1030,6 +1042,242 @@
                                         alt="">
                                 </a>
                             </div>
+                        </section>
+                        <!--//docs-intro-->
+                    </header>
+                </article>
+                <article class="docs-article" id="custom_job_request">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Custom Job Request</h1>
+                        <section class="docs-intro">
+                            <p>
+                                Custom Job Request allows customers to post specific job requirements and receive bids
+                                from interested service providers.
+                                This creates a flexible system where customers can find the right provider for their
+                                unique needs.
+                            </p>
+                            <h2>How It Works - Customer Side</h2>
+                            <br>
+                            <div class="customer-flow">
+                                <h3>1. Requesting a Custom Job</h3>
+                                <div class="simplelightbox-galler mt-2">
+                                    <a href="../admin-panel/assets/images/make_custom_job_request.jpg">
+                                        <img src="../admin-panel/assets/images/make_custom_job_request.jpg"
+                                            class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Create a detailed job request explaining what they need</li>
+                                    <li>Describe their requirements</li>
+                                    <li>Set their budget expectations</li>
+                                    <li>Specify when they need the job done</li>
+                                    <li>Add any special instructions</li>
+                                </ul>
+                                <h3>2. After Posting the Request</h3>
+                                <div class="simplelightbox-galler mt-2">
+                                    <a href="../admin-panel/assets/images/custom_job_with_bidder.jpg">
+                                        <img src="../admin-panel/assets/images/custom_job_with_bidder.jpg"
+                                            class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>The request is shared with relevant service providers</li>
+                                    <li>Customer receives notifications as providers start bidding</li>
+                                    <li>Customer can view all incoming bids in their app</li>
+                                </ul>
+                                <h3>3. Finalizing the Job</h3>
+                                <ul>
+                                    <li>Customer reviews all received bids</li>
+                                    <li>Selects the most suitable bid</li>
+                                    <li>Place Booking</li>
+                                </ul>
+                            </div>
+                            <h2>How It Works - Provider Side</h2>
+                            <br>
+                            <div class="provider-flow">
+                                <h3>1. Custom Job Request setting</h3>
+                                <p>Providers can enable/disable custom job request setting from their respective app and
+                                    panel :</p>
+                                <div class="simplelightbox-galler mt-2">
+                                    <a
+                                        href="../admin-panel/assets/images/enable_disable_custom_job_setting_provider_panel.png">
+                                        <img src="../admin-panel/assets/images/enable_disable_custom_job_setting_provider_panel.png"
+                                            class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <h3>2. Setting Up Preferences</h3>
+                                <p>Providers can customize what jobs they want to see by:</p>
+                                <div class="d-flex">
+                                    <div class="simplelightbox-galler mt-2 me-2">
+                                        <a href="../admin-panel/assets/images/manage_category_preference_panel.png">
+                                            <img src="../admin-panel/assets/images/manage_category_preference_panel.png"
+                                                class="image-doc" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="simplelightbox-galler mt-2">
+                                        <a href="../admin-panel/assets/images/manage_category_preference_app.jpg">
+                                            <img src="../admin-panel/assets/images/manage_category_preference_app.jpg"
+                                                class="image-doc" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>Selecting their service categories (e.g., plumbing, cleaning, painting)</li>
+                                </ul>
+                                <h3>3. Receiving Job Requests</h3>
+                                <div class="d-flex me-3">
+                                    <div class="simplelightbox-galler mt-2 me-2">
+                                        <a href="../admin-panel/assets/images/received_custom_job_provider_panel.png">
+                                            <img src="../admin-panel/assets/images/received_custom_job_provider_panel.png"
+                                                class="image-doc" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="simplelightbox-galler mt-2">
+                                        <a href="../admin-panel/assets/images/received_custom_job_request_app.jpg">
+                                            <img src="../admin-panel/assets/images/received_custom_job_request_app.jpg"
+                                                class="image-doc" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <p>Provider gets notifications only for jobs that:</p>
+                                <div class="simplelightbox-galler mt-2">
+                                    <a href="../admin-panel/assets/images/new_custom_job_notification.jpg">
+                                        <img src="../admin-panel/assets/images/new_custom_job_notification.jpg"
+                                            class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Match their selected categories</li>
+                                    <li>Are in their service area</li>
+                                </ul>
+                                <h3>4. Bidding Process</h3>
+                                <p>When providers see a job they're interested in, they can:</p>
+                                <ul>
+                                    <li>Review the complete job details</li>
+                                    <li>Submit their bid with:
+                                        <div class="d-flex">
+                                            <div class="simplelightbox-galler mt-2 me-3">
+                                                <a href="../admin-panel/assets/images/submit_bid_provider_panel.png">
+                                                    <img src="../admin-panel/assets/images/submit_bid_provider_panel.png"
+                                                        class="image-doc" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="simplelightbox-galler mt-2 ">
+                                                <a href="../admin-panel/assets/images/submit_bit_provider_app.jpg">
+                                                    <img src="../admin-panel/assets/images/submit_bit_provider_app.jpg"
+                                                        class="image-doc" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li>Their price quote</li>
+                                            <li>When they can do the job</li>
+                                        </ul>
+                                    </li>
+                                    <li>Wait for customer's response</li>
+                                    <li>If selected, receive booking confirmation and customer details</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </header>
+                </article>
+                <article class="docs-article" id="post_booking_charges">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Post-Booking Charges
+                        </h1>
+                        <section class="docs-intro">
+
+                            <ul>
+                                <li>
+                                    This feature enables both service providers and administrators to add extra charges to a
+                                    booking after it has been created. The additional charges can be applied to accommodate
+                                    unforeseen costs, extra services requested by the customer, or other adjustments
+                                    necessary for the booking.
+                                </li>
+                                <li>
+                                    Only the provider or admin can complete the booking if the payment for additional charges has been made. If no additional charges are added, 
+                                    the booking can be completed without this requirement.                                
+                                </li>
+                                <li>
+                                    When changing the booking status to <b>Booking Ended</b> provider/admin can add additional charges and upload proof of work completion.
+                                </li>
+                            </ul>
+                          
+                            <div class="simplelightbox-galler mt-2">
+                                <a href="../admin-panel/assets/images/add_additional_charges_admin_panel.png">
+                                    <img src="../admin-panel/assets/images/add_additional_charges_admin_panel.png" class="image-doc"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="simplelightbox-galler mt-2">
+                                <a href="../admin-panel/assets/images/additional_charge_detail.png">
+                                    <img src="../admin-panel/assets/images/additional_charge_detail.png" class="image-doc"
+                                        alt="">
+                                </a>
+                            </div>
+                            <h4 class="mt-2">For Customer App/Web</h4>
+
+
+                            <ul>
+
+                                <li>
+                                    <div>
+                                        <p>Customers can view any additional charges and proceed with payment.</p>
+                                        <div class="d-flex">
+                                            <div class="simplelightbox-galler mt-2 me-4">
+                                                <a href="../admin-panel/assets/images/booking_detaila_customer_app.jpg">
+                                                    <img src="../admin-panel/assets/images/booking_detaila_customer_app.jpg" class="image-doc" alt="Booking details for the customer app">
+                                                </a>
+                                            </div>
+                                            <div class="simplelightbox-galler mt-2 me-4">
+                                                <a href="../admin-panel/assets/images/pay_additional_charges_web.png">
+                                                    <img src="../admin-panel/assets/images/pay_additional_charges_web.png" class="image-doc" alt="Payment details for additional charges on the web">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                                <li>
+                                    <div class="mt-2">
+                                        <p>They have two options: online payment or cash on delivery.</p>
+                                        <div class="d-flex">
+                                            <div class="simplelightbox-galler mt-2 me-4">
+                                                <a href="../admin-panel/assets/images/pay_additional_charges_app.jpg">
+                                                    <img src="../admin-panel/assets/images/pay_additional_charges_app.jpg" class="image-doc" alt="Payment options on the app">
+                                                </a>
+                                            </div>
+                                            <div class="simplelightbox-galler mt-2 me-4">
+                                                <a href="../admin-panel/assets/images/payment_options_of_additional_charges.png">
+                                                    <img src="../admin-panel/assets/images/payment_options_of_additional_charges.png" class="image-doc" alt="Payment options for additional charges">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                                <li>
+                                    <div class="mt-2">
+                                        <p>On the Booking Details page, customers can view the details of any additional charges.</p>
+                                        <div class="d-flex">
+                                            <div class="simplelightbox-galler mt-2 me-4">
+                                                <a href="../admin-panel/assets/images/after_paid_additional_charges_app.jpg">
+                                                    <img src="../admin-panel/assets/images/after_paid_additional_charges_app.jpg" class="image-doc" alt="Details after payment of additional charges on the app">
+                                                </a>
+                                            </div>
+                                            <div class="simplelightbox-galler mt-2 me-4">
+                                                <a href="../admin-panel/assets/images/paid_additional_charge_details_web.png">
+                                                    <img src="../admin-panel/assets/images/paid_additional_charge_details_web.png" class="image-doc" alt="Details of paid additional charges on the web">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                         
+                          
+                           
+                            
                         </section>
                         <!--//docs-intro-->
                     </header>
