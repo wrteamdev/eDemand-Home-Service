@@ -96,7 +96,7 @@
 									</strong>
 									</br></br>
 									<b>
-										Whenever you seek support for WRTeam products via Skype or WhatsApp, please
+										Whenever you seek support for WRTeam products via Microsoft Teams or WhatsApp, please
 										share your <a
 											href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code"
 											target="_blank">purchase code</a> and Codecanyon username. This information
@@ -579,7 +579,8 @@
 									<ul>
 										<li>
 											<h4>Note: You have to use same firebase project for the app, web and
-												panels,<br> If you have already created the Firebase project then skip these
+												panels,<br> If you have already created the Firebase project then skip
+												these
 												steps till 5. start from step 6.</h4>
 										</li>
 										<li><strong style="color: red;">For create firebase app from flutter you
@@ -911,57 +912,84 @@
 						<section id="deeplink">
 
 							<div class="container">
-								<h2>How to setup Deeplink</h2>
-								<ol><br>
-									<li>First of all download this google files from the link : <a
-											href="https://drive.google.com/drive/folders/1LbSXPmTRvz6-VWdr4isJz9AE00p8ynJ6"
-											target="_blank" style="color:red">Server
-											Side Deeplink Files</a>
-									</li>
-									<li>Open both files in the any text editor and follow below steps</li>
-									<li></li><img src="images/deep-link-1.webp">
-									<li></li><img src="images/deep-link-2.webp">
-									<li>After above changes save both files (Note- Keep name proper same of both files)
-									</li>
-									<li>Open server > Go to admin panel root folder</li>
-									<li>You will get .well-known folder on root directory</li>
-									<li>If you dont get that folder from setting enable setting visible hidden files
-										then
-										check</li>
-									<li>After the change setting still you don't find the files, Create new directory
-										named
-										<a style="color:red">.well-known</a> (Makesure name starts with
-										dot[.])
-									</li>
-									<li>Add both above saved files inside the <a style="color:red">.well-known</a>
-										folder.
-									</li>
-									<li>In server > admin panel root folder you will get <a
-											style="color:red">.htaccess</a> file, Open it and do changes as
-										per
-										below image.</li>
-									<li></li><img src="images/deep-link-3.webp">
-									<p>If you didn't find the code in your .htaccess file then copy the below code and
-										paste it in your file and make necessary changes</p>
-									<code>
-									# 300 Redirections
-									    # Redirect for Android devices
-									    RewriteCond %{HTTP_USER_AGENT} (Android) [NC]
-									    RewriteRule ^.*/provider/.*$ YOUR_CUSTOMER_ANDROID_APP_LINK [R=301,L]
-									    # Add more redirections here as needed...
-									    # Redirect for iPhone/iPad devices
-									    RewriteCond %{HTTP_USER_AGENT} (iPhone|iPad) [NC]
-									    RewriteRule ^.*/provider/.*$ YOUR_CUSTOMER_IOS_APP_LINK [R=302,L]
-									</code>
-									<li>For further steps open customer app code in android studio and follow below
-										steps.
-									</li>
-									<li></li><img src="images/deep-link-4.png">
-									<li></li><img src="images/deep-link-5.png">
-									<br><br>
+								<h1>📌 DeepLink Setup 🚀</h1>
+								<p>Setting up deep links ensures seamless navigation between your web, mobile, and panel
+									applications. Follow these steps carefully to configure deep linking in your Flutter
+									project.</p>
 
-								</ol>
-								</p>
+								<div class="step">
+									<h2>1️⃣ Add Domain 🌐</h2>
+									<ul>
+										<li>Choose the appropriate domain based on your usage:
+											<ul>
+												<li>If using a <strong>web domain</strong>, add the web domain. (If you
+													want to use web for redirect)</li>
+												<li>If using a <strong>panel domain</strong>, add the panel domain.</li>
+											</ul>
+										</li>
+										<li>Update the necessary files:
+											<ul>
+												<li><code>lib/utils/constant.dart</code></li><br>
+												<img src="images/deeplink1.png"></a><br><br>
+												<li><code>android/app/src/main/AndroidManifest.xml</code></li><br>
+												<img src="images/deeplink2.png"></a><br><br>
+											</ul>
+										</li>
+										<li><strong>Ensure correctness:</strong> The domain should match across all
+											configurations.</li>
+									</ul>
+								</div>
+
+								<div class="step">
+									<h2>2️⃣ Configure Deep Link Scheme 🔗</h2>
+									<ul>
+										<li>Modify the required files:
+											<ul>
+												<li><code>android/app/src/main/AndroidManifest.xml</code></li>
+												<img src="images/deeplink3.png"></a><br><br>
+												<br>
+												<li><code>ios/Runner/Info.plist</code></li>
+												<br>
+												<img src="images/deeplink4.png"></a><br><br>
+
+											</ul>
+										</li>
+										<li><strong>Panel Settings:</strong> Navigate to
+											<code>System Setting > General Setting > Deep Link Settings</code> to add a
+											scheme for deep linking.
+										</li>
+										<li>Save the changes.</li>
+										<br>
+										<img src="images/deeplink5.png"></a><br><br>
+										<br>
+									</ul>
+									<div class="note">
+										<p>Please add your scheme here using a single word in lowercase (e.g., edemand).
+										</p>
+									</div>
+								</div>
+
+								<div class="step">
+									<h2>3️⃣ Add Play Store & App Store URLs 📲</h2>
+									<ul>
+										<li>Navigate to <code>System Setting > App Setting > App URL</code></li>
+										<li>Add the correct Play Store and App Store links for your app.</li>
+										<li>Save the changes.</li>
+										<li><strong>Why?</strong> These links enable users to be redirected correctly
+											when opening the app from external sources.</li>
+									</ul>
+								</div>
+
+								<h2>✅ Final Check:</h2>
+								<ul>
+									<li>Ensure all URLs and domains match across different configurations.</li>
+									<li>Test the deep linking functionality on both <strong>Android</strong> and
+										<strong>iOS</strong>.
+									</li>
+									<li>Verify the app opens correctly from web links and external redirects.</li>
+								</ul>
+
+								<p>🚀 You're all set! Enjoy seamless deep linking in your app. Happy coding! 🎉</p>
 							</div>
 							</ol>
 						</section>
@@ -1397,9 +1425,9 @@
 								<h2>Need Support?</h2>
 								<p>Its our pleasure to serve our service and support. please contact our support team.
 								</p>
-								<p>Customer Support : Jignesh Majethiya<br> Skype: <a
-										href="https://join.skype.com/invite/wpO6RYDhElUY" target="_blank"
-										style='color:#3c55d1'> Jignesh Majethiya</a><br>
+								<p>Customer Support : Rilpa Vadhadiya<br> Microsoft Teams: <a
+										href="https://teams.live.com/l/invite/FEAnuP0ELuAls39ygI" target="_blank"
+										style='color:#3c55d1'> Rilpa Vadhadiya</a><br>
 
 
 								</p>
@@ -1448,8 +1476,8 @@
 											style="color:#0e8bcb;">https://wrteam.in</span>
 									</a>
 
-								<p> Skype: <a href="https://join.skype.com/invite/wpO6RYDhElUY" target="_blank"
-										style='color:#3c55d1'> Jignesh Majethiya</a><br>
+								<p> Microsoft Teams: <a href="https://teams.live.com/l/invite/FEAnuP0ELuAls39ygI" target="_blank"
+										style='color:#3c55d1'> Rilpa Vadhadiya</a><br>
 
 
 								</p>
