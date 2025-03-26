@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Version Update - eDemand Docs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="static/img/web/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <nav class="left-sidebar">
+            <div class="sidebar-header">
+                <h3>eDemand Docs</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i>Web Prerequisites</a></li>
+                <li><a href="website-setup-locally.html"><i class="fas fa-laptop-code"></i>Website Setup Locally</a></li>
+                <li><a href="firebase-setup.html"><i class="fas fa-database"></i>Firebase Setup</a></li>
+                <li><a href="run-website-locally.html"><i class="fas fa-play"></i>Run Website Locally</a></li>
+                <li><a href="system-configuration.html"><i class="fas fa-cogs"></i>System Configuration</a></li>
+                <li><a href="deploy-your-site.html"><i class="fas fa-rocket"></i>Deploy your site</a></li>
+                <li class="active"><a href="new-version-update.html"><i class="fas fa-sync"></i>New Version Update</a></li>
+                <li><a href="support.html"><i class="fas fa-headset"></i>Support</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <div class="content-header">
+                <h1>New Version Update</h1>
+            </div>
+            <div class="content-body">
+                <section id="update-steps">
+                    <ol>
+                        <li>
+                            <strong>Extract the ZIP File</strong>:
+                            Extract the ZIP file containing the web code that you received from Codecanyon.
+                        </li>
+
+                        <li>
+                            <strong>Open the Code in VS Code</strong>:
+                            Open the extracted web code in Visual Studio Code (VS Code).
+                        </li>
+
+                        <li>
+                            <strong>Edit the .env File</strong>:
+                            Locate and open the .env file in your code editor. Add the admin URL as specified in the
+                            documentation.
+                        </li>
+
+                        <li>
+                            <strong>Configure Firebase</strong>:
+                            Open the Firebase Console. Follow the steps outlined in the Firebase documentation. Add the
+                            Firebase details to the .env file of your web project.
+                        </li>
+
+                        <li>
+                            <strong>Install Dependencies</strong>:
+                            Run the following command to install the necessary dependencies:
+
+                            <pre>npm install</pre>
+                        </li>
+
+                        <li>
+                            <strong>Build the Project</strong>:
+                            Run the following command to build the project:
+
+                            <pre>npm run export</pre>
+                        </li>
+
+                        <li>
+                            <strong>Deploy the Build Folder</strong>:
+                            After the build process completes, create a ZIP file of the <strong>out</strong> folder.
+                            Upload the contents of the build folder to your web server.
+                        </li>
+                    </ol>
+                </section>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Section Links -->
+        <nav class="right-sidebar">
+            <div class="sidebar-header">
+                <h3>On this page</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#update-steps">Update Steps</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

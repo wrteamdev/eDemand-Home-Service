@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Setup - eDemand Docs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="static/img/web/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <nav class="left-sidebar">
+            <div class="sidebar-header">
+                <h3>eDemand Docs</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i>Web Prerequisites</a></li>
+                <li><a href="website-setup-locally.html"><i class="fas fa-laptop-code"></i>Website Setup Locally</a></li>
+                <li class="active"><a href="firebase-setup.html"><i class="fas fa-database"></i>Firebase Setup</a></li>
+                <li><a href="run-website-locally.html"><i class="fas fa-play"></i>Run Website Locally</a></li>
+                <li><a href="system-configuration.html"><i class="fas fa-cogs"></i>System Configuration</a></li>
+                <li><a href="deploy-your-site.html"><i class="fas fa-rocket"></i>Deploy your site</a></li>
+                <li><a href="new-version-update.html"><i class="fas fa-sync"></i>New Version Update</a></li>
+                <li><a href="support.html"><i class="fas fa-headset"></i>Support</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <div class="content-header">
+                <h1>Firebase Setup</h1>
+            </div>
+            <div class="content-body">
+                <section id="note">
+                    <div class="note">
+                        <p>If you already created firebase project at that time then you can skip below firebase steps
+                        </p>
+                    </div>
+                </section>
+
+                <section id="configure-firebase">
+                    <h2>Configure the firebase setup</h2>
+                    <ol>
+                        <li>Create a firebase project at <a href="https://console.firebase.google.com/"
+                                target="_blank">https://console.firebase.google.com/</a></li>
+                    </ol>
+                    <img src="static/img/firebase/firebase-console.png" alt="firebase-console">
+
+                    <ol start="2">
+                        <li>Register a new account or try to log in with existing google accout.</li>
+                    </ol>
+                    <img src="static/img/firebase/console-page.png" alt="console-page">
+
+                    <ol start="3">
+                        <li>Once logged in, you can see firebase console dashboard. Click on Add Project. Provide a
+                            project name, and then select country and then after that click on Create Project. For
+                            example, see the below image</li>
+                    </ol>
+                    <img src="static/img/firebase/Add-Project.png" alt="Add-Project">
+                    <img src="static/img/firebase/add-project2.png" alt="add-project2">
+
+                    <ol start="4">
+                        <li>Once the project has been created, it will automatically redirect to Firebase dashboard
+                            screen.</li>
+                    </ol>
+                    <img src="static/img/firebase/web-auth.png" alt="web-auth">
+
+                    <ol start="5">
+                        <li>Go to Authentication and open <strong>Sign-in method</strong> tab and enable providers which
+                            is highlight below</li>
+                    </ol>
+                    <img src="static/img/firebase/sigin-method.png" alt="sign-in-method">
+
+                    <ol start="6">
+                        <li>Now at the bottom of the page, in <strong>Authorized domains</strong>, localhost and a
+                            Firebase domain are automatically added. Here we've to add domain name without
+                            <strong>http://</strong> or <strong>https://</strong>. You can add http:// and https://
+                            whever eDemand Front End(Web Version) Website will get hosted. If you're using www as prefix
+                            of domain name then you must have to add that.
+                        </li>
+                    </ol>
+
+                    <ol start="7">
+                        <li>Now add your domain with www. as prefix like <strong>www.myeDemand.com</strong></li>
+                    </ol>
+                    <img src="static/img/firebase/authorized-domains.png" alt="authorized-domains">
+
+                    <ol start="8">
+                        <li>Go to Project settings in firebase dashboard option.</li>
+                    </ol>
+                    <img src="static/img/firebase/project-settings.png" alt="project-settings">
+
+                    <ol start="9">
+                        <li>Go to Project settings and scroll down you will find created web App there you find config
+                            option that will have firebase settings for front end.</li>
+                    </ol>
+
+                    <ol start="10">
+                        <li>Add the below config to your <strong>Firebase Console</strong> > <strong>Project
+                                settings</strong> > <strong>General</strong></li>
+                    </ol>
+                    <img src="static/img/firebase/web-config.png" alt="web-config">
+
+                    <ol start="11">
+                        <li>You need to set this details in eDemand <strong>Admin panel</strong> -> <strong>Web
+                                Settings</strong> page from this Project settings page in firebase dashboard option</li>
+                    </ol>
+                    <img src="static/img/firebase/admin-web-firebase.png" alt="admin-web-firebase">
+
+                    <ol start="12">
+                        <li>Also update firebase config value in web <strong>.env</strong> file and
+                            <strong>public/firebase-messaging-sw.js</strong> file
+                        </li>
+                    </ol>
+                    <img src="static/img/web/firebase_config.png" alt="firebase-web">
+                    <img src="static/img/web/firebase_messaging.png" alt="firebase-env">
+                </section>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Section Links -->
+        <nav class="right-sidebar">
+            <div class="sidebar-header">
+                <h3>On this page</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#configure-firebase">Configure the firebase setup</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

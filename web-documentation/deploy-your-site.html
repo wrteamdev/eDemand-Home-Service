@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy your site - eDemand Docs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="static/img/web/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <nav class="left-sidebar">
+            <div class="sidebar-header">
+                <h3>eDemand Docs</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i>Web Prerequisites</a></li>
+                <li><a href="website-setup-locally.html"><i class="fas fa-laptop-code"></i>Website Setup Locally</a></li>
+                <li><a href="firebase-setup.html"><i class="fas fa-database"></i>Firebase Setup</a></li>
+                <li><a href="run-website-locally.html"><i class="fas fa-play"></i>Run Website Locally</a></li>
+                <li><a href="system-configuration.html"><i class="fas fa-cogs"></i>System Configuration</a></li>
+                <li class="active"><a href="deploy-your-site.html"><i class="fas fa-rocket"></i>Deploy your site</a></li>
+                <li><a href="new-version-update.html"><i class="fas fa-sync"></i>New Version Update</a></li>
+                <li><a href="support.html"><i class="fas fa-headset"></i>Support</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <div class="content-header">
+                <h1>Deploy your site</h1>
+            </div>
+            <div class="content-body">
+                <section id="generate-build">
+                    <h2>Generate Build</h2>
+                    <p>To Generate Build Hit the below shown command.</p>
+                    <pre>npm run export</pre>
+
+                    <div class="note">
+                        <p>Note: after above command once complete then one <strong>out</strong> folder created make zip
+                            and upload to server of web domain</p>
+                    </div>
+                </section>
+
+                <section id="upload-htaccess">
+                    <h2>Upload .htaccess file</h2>
+                    <p>Upload .htaccess file on your server which located in your web code folder.</p>
+                </section>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Section Links -->
+        <nav class="right-sidebar">
+            <div class="sidebar-header">
+                <h3>On this page</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#generate-build">Generate Build</a></li>
+                <li><a href="#upload-htaccess">Upload .htaccess file</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Setup Locally - eDemand Docs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="static/img/web/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <nav class="left-sidebar">
+            <div class="sidebar-header">
+                <h3>eDemand Docs</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i>Web Prerequisites</a></li>
+                <li class="active"><a href="website-setup-locally.html"><i class="fas fa-laptop-code"></i>Website Setup
+                        Locally</a></li>
+                <li><a href="firebase-setup.html"><i class="fas fa-database"></i>Firebase Setup</a></li>
+                <li><a href="run-website-locally.html"><i class="fas fa-play"></i>Run Website Locally</a></li>
+                <li><a href="system-configuration.html"><i class="fas fa-cogs"></i>System Configuration</a></li>
+                <li><a href="deploy-your-site.html"><i class="fas fa-rocket"></i>Deploy your site</a></li>
+                <li><a href="new-version-update.html"><i class="fas fa-sync"></i>New Version Update</a></li>
+                <li><a href="support.html"><i class="fas fa-headset"></i>Support</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <div class="content-header">
+                <h1>Website Setup Locally</h1>
+            </div>
+            <div class="content-body">
+                <section id="configure-files">
+                    <h2>Configure files</h2>
+                    <p>Open the download web folder in a code editor like <strong>VSCode</strong></p>
+                </section>
+
+                <section id="env-configuration">
+                    <h2>.env file configuration</h2>
+                    <p>Open the <code>.env</code> file and update the details as specified in the documentation.</p>
+
+                    <section id="update-app-name">
+                        <h3>Update the Application Name</h3>
+                        <p>In the <code>.env</code> file, locate the line that starts with
+                            <code>NEXT_PUBLIC_APPLICATION_NAME=</code> and replace <code>YourAppName</code> with your
+                            desired application name. For example:
+                        </p>
+                        <pre>NEXT_PUBLIC_APPLICATION_NAME="eDemand"</pre>
+                        <p>Make sure to keep the <code>NEXT_PUBLIC_APPLICATION_NAME=</code> part unchanged and only
+                            update the value after the equals sign.</p>
+                        <img src="static/img/web/application_name.png" alt="env-file" />
+                    </section>
+
+                    <section id="update-admin-url">
+                        <h3>Update the Admin URL</h3>
+                        <p>In the <code>.env</code> file, locate the line that starts with
+                            <code>NEXT_PUBLIC_ADMIN_URL=</code> and replace
+                            <code>https://edemand.wrteam.me/api/v1/</code> with your desired admin URL. For example:
+                        </p>
+                        <pre>NEXT_PUBLIC_ADMIN_URL="https://edemand.wrteam.me/api/v1/"</pre>
+                        <p>Make sure to keep the <code>NEXT_PUBLIC_ADMIN_URL=</code> part unchanged and only update the
+                            value after the equals sign.</p>
+                        <img src="static/img/web/admin_url.png" alt="env-file" />
+
+                        <div class="tip">
+                            <p><strong>Tip:</strong> To find the admin URL, follow these steps:</p>
+                            <ol>
+                                <li>Go to <strong>Admin Panel</strong>.</li>
+                                <li>Navigate to <strong>System Settings</strong>.</li>
+                                <li>Select <strong>API Key Settings</strong>.</li>
+                                <li>Under <strong>Client API Keys</strong>, you'll find the <strong>API link for
+                                        Customer App</strong>.</li>
+                            </ol>
+                            <p>This will give you the Admin URL you need.</p>
+                        </div>
+                    </section>
+
+                    <section id="update-website-url">
+                        <h3>Update the Website URL</h3>
+                        <p>In the <code>.env</code> file, locate the line that starts with
+                            <code>NEXT_PUBLIC_WEBSITE_URL=</code> and replace <code>https://edemandweb.wrteam.me/</code>
+                            with your desired website URL. For example:
+                        </p>
+                        <pre>NEXT_PUBLIC_WEBSITE_URL="https://edemandweb.wrteam.me/"</pre>
+                        <p>Make sure to keep the <code>NEXT_PUBLIC_WEBSITE_URL=</code> part unchanged and only update
+                            the value after the equals sign.</p>
+                        <img src="static/img/web/web_url.png" alt="env-file" />
+                    </section>
+
+                    <section id="update-google-map-key">
+                        <h3>Update the Google Map Place API Key</h3>
+                        <p>In the <code>.env</code> file, locate the line that starts with
+                            <code>NEXT_PUBLIC_GOOGLE_MAP_API_KEY=</code> and replace
+                            <code>AIzaxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code> with your desired Google Maps API key. For
+                            example:
+                        </p>
+                        <pre>NEXT_PUBLIC_GOOGLE_MAP_API_KEY="AIzaxxxxxxxxxxxxxxxxxxxxxxxxxxxx"</pre>
+                        <p>Make sure to keep the <code>NEXT_PUBLIC_GOOGLE_MAP_API_KEY=</code> part unchanged and only
+                            update the value after the equals sign.</p>
+                        <img src="static/img/web/place_api_key.png" alt="env-file" />
+                    </section>
+
+                    <section id="update-firebase-vapid-key">
+                        <h3>Update the Firebase Vapid key for notifications</h3>
+                        <p>In the <code>.env</code> file, locate the line that starts with
+                            <code>NEXT_PUBLIC_FIREBASE_VAPID_KEY=</code> and replace
+                            <code>AIzaxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code> with your desired Firebase Vapid key. For
+                            example:
+                        </p>
+                        <pre>NEXT_PUBLIC_FIREBASE_VAPID_KEY=AIzaxxxxxxxxxxxxxxxxxxxxxxxxxxxx</pre>
+                        <p>Make sure to keep the <code>NEXT_PUBLIC_FIREBASE_VAPID_KEY=</code> part unchanged and only
+                            update the value after the equals sign.</p>
+                        <p>To get the <strong>Firebase Vapid Key</strong>:</p>
+                        <ol>
+                            <li>Go to your <strong>Firebase project</strong>.</li>
+                            <li>Navigate to <strong>Project Settings</strong>.</li>
+                            <li>In the <strong>Cloud Messaging</strong> section, go to <strong>Web
+                                    Configuration</strong>.</li>
+                            <li>Under <strong>Web Push Certificates</strong>, generate a key pair.</li>
+                            <li>Copy the <strong>Vapid Key</strong> and paste it into your <code>.env</code> file.</li>
+                        </ol>
+                        <img src="static/img/web/vapid_api_key.png" alt="env-file" />
+                    </section>
+
+                    <section id="update-country-code">
+                        <h3>Update the Default Country Code</h3>
+                        <div class="tip">
+                            <p><strong>Tip:</strong> Here you can find → <a
+                                    href="https://developers.google.com/hotels/hotel-prices/dev-guide/country-codes"
+                                    target="_blank">Default Country List</a></p>
+                        </div>
+                        <p>In the <code>.env</code> file, locate the line that starts with
+                            <code>NEXT_PUBLIC_DEFAULT_COUNTRY_CODE=</code> and replace <code>in</code> with your desired
+                            default country code. For example:
+                        </p>
+                        <pre>NEXT_PUBLIC_DEFAULT_COUNTRY_CODE=in</pre>
+                        <p>Make sure to keep the <code>NEXT_PUBLIC_DEFAULT_COUNTRY_CODE=</code> part unchanged and only
+                            update the value after the equals sign.</p>
+                        <img src="static/img/web/default_country_code.png" alt="env-file" />
+                    </section>
+
+                    <section id="update-meta-info">
+                        <h3>Update Website Meta Title, Description, and Keywords</h3>
+                        <p>In the <code>.env</code> file, locate and update the following lines with your desired meta
+                            information:</p>
+                        <pre>NEXT_PUBLIC_META_TITLE="eDemand - Your On-Demand Service Booking Platform"
+
+NEXT_PUBLIC_META_DESCRIPTION="eDemand connects you with trusted local service providers for home services, repairs, maintenance, and professional services. Book verified experts, track appointments, and get instant quotes. Your one-stop platform for all service needs."
+
+NEXT_PUBLIC_META_KEYWORDS="on-demand services, home services, service booking app, professional services, local service providers, handyman services, home maintenance, service marketplace, instant booking, expert services, home repair, service professionals, trusted providers, service platform, local experts, service scheduling, verified professionals, service appointments, home improvement services, service booking platform"</pre>
+                        <p>Make sure to keep the variable names (<code>NEXT_PUBLIC_META_TITLE=</code>,
+                            <code>NEXT_PUBLIC_META_DESCRIPTION=</code>, <code>NEXT_PUBLIC_META_KEYWORDS=</code>)
+                            unchanged and only update the values as per your project requirements.
+                        </p>
+                        <img src="static/img/web/meta_details.png" alt="env-file" />
+                    </section>
+                </section>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Section Links -->
+        <nav class="right-sidebar">
+            <div class="sidebar-header">
+                <h3>On this page</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#configure-files">Configure files</a></li>
+                <li><a href="#env-configuration">.env file configuration</a></li>
+                <li><a href="#update-app-name">Update Application Name</a></li>
+                <li><a href="#update-admin-url">Update Admin URL</a></li>
+                <li><a href="#update-website-url">Update Website URL</a></li>
+                <li><a href="#update-google-map-key">Update Google Map API Key</a></li>
+                <li><a href="#update-firebase-vapid-key">Update Firebase Vapid Key</a></li>
+                <li><a href="#update-country-code">Update Country Code</a></li>
+                <li><a href="#update-meta-info">Update Meta Information</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

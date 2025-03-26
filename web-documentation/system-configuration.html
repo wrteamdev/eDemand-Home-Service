@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Configuration - eDemand Docs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="static/img/web/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <nav class="left-sidebar">
+            <div class="sidebar-header">
+                <h3>eDemand Docs</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i>Web Prerequisites</a></li>
+                <li><a href="website-setup-locally.html"><i class="fas fa-laptop-code"></i>Website Setup Locally</a></li>
+                <li><a href="firebase-setup.html"><i class="fas fa-database"></i>Firebase Setup</a></li>
+                <li><a href="run-website-locally.html"><i class="fas fa-play"></i>Run Website Locally</a></li>
+                <li class="active"><a href="system-configuration.html"><i class="fas fa-cogs"></i>System Configuration</a></li>
+                <li><a href="deploy-your-site.html"><i class="fas fa-rocket"></i>Deploy your site</a></li>
+                <li><a href="new-version-update.html"><i class="fas fa-sync"></i>New Version Update</a></li>
+                <li><a href="support.html"><i class="fas fa-headset"></i>Support</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <div class="content-header">
+                <h1>System Configuration</h1>
+            </div>
+            <div class="content-body">
+                <section id="language-configuration">
+                    <h2>Language Configuration</h2>
+                    <div class="tip">
+                        <p>Get Your Language Codes → <a
+                                href="https://developers.google.com/admin-sdk/directory/v1/languages"
+                                target="_blank">Get language codes</a></p>
+                    </div>
+
+                    <h3>Add a New Language</h3>
+                    <div class="note">
+                        <p>File name <strong>must</strong> be the same as the language code.</p>
+                    </div>
+
+                    <p>To add a new language file, place your file in the following directory:</p>
+                    <p><strong><code>src/utils/Languages/</code></strong></p>
+
+                    <p><strong>Example:</strong></p>
+                    <p><strong><code>src/utils/Languages/en.json</code></strong></p>
+
+                    <div class="note">
+                        <p>When updating translations, <strong>only change the text on the right side (the
+                                value)</strong> and do <strong>not</strong> modify the text on the left side (the key).
+                        </p>
+                        <p>✅ <strong>Correct way to update:</strong></p>
+                        <pre>"all_providers": "All Providers"</pre>
+                        <p>❌ <strong>Incorrect way (Do NOT change the key):</strong></p>
+                        <pre>"all_providers_updated": "All Providers"  // ❌ Incorrect!</pre>
+                    </div>
+
+                    <img src="static/img/web/add_lang.png" alt="get-language-codes">
+
+                    <hr>
+
+                    <h3>Add Supported Languages List & Default Language</h3>
+                    <p>To configure supported languages, update the <code>supportedLanguages</code> array &
+                        <code>defaultLanguage</code> object in the <code>Langconfig.js</code> file located in the
+                        <code>src/utils</code> folder.
+                    </p>
+
+                    <h4><strong>Example Configuration:</strong></h4>
+                    <pre>let config = {
+  supportedLanguages: [
+    { language: "English", langCode: "en", isRtl: false },
+    { language: "Hindi", langCode: "hi", isRtl: false },
+    { language: "Urdu", langCode: "ur", isRtl: true },
+    // Add your new language here
+  ],
+  defaultLanguage: {
+    language: "English",
+    langCode: "en",
+    isRtl: false,
+  },
+};
+export default config;</pre>
+
+                    <img src="static/img/web/supported_langs.png" alt="get-language-codes">
+                    <img src="static/img/web/default_lang.png" alt="get-language-codes">
+                </section>
+
+                <section id="change-theme-color">
+                    <h2>Change theme color</h2>
+                    <ul>
+                        <li>Go to: <strong>src -> styles -> globals.css</strong></li>
+                    </ul>
+                    <img src="static/img/web/theme_color.png" alt="theme-file">
+                </section>
+
+                <section id="change-font-style">
+                    <h2>Change Font style</h2>
+                    <ul>
+                        <li>Go to: <strong>src -> pages -> app.js</strong></li>
+                    </ul>
+                    <img src="static/img/web/update_font.png" alt="font-file">
+                </section>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Section Links -->
+        <nav class="right-sidebar">
+            <div class="sidebar-header">
+                <h3>On this page</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#language-configuration">Language Configuration</a></li>
+                <li><a href="#change-theme-color">Change theme color</a></li>
+                <li><a href="#change-font-style">Change Font style</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
