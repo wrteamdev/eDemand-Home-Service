@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Setup - eDemand Docs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="static/img/web/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <nav class="left-sidebar">
+            <div class="sidebar-header">
+                <h3>eDemand Docs</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i>Web Prerequisites</a></li>
+                <li><a href="website-setup-locally.html"><i class="fas fa-laptop-code"></i>Website Setup Locally</a></li>
+                <li><a href="firebase-setup.html"><i class="fas fa-database"></i>Firebase Setup</a></li>
+                <li><a href="run-website-locally.html"><i class="fas fa-play"></i>Run Website Locally</a></li>
+                <li><a href="system-configuration.html"><i class="fas fa-cogs"></i>System Configuration</a></li>
+                <li class="active"><a href="pwa-setup.html"><i class="fas fa-mobile-alt"></i>PWA Setup</a></li>
+                <li><a href="deploy-your-site.html"><i class="fas fa-rocket"></i>Deploy your site</a></li>
+                <li><a href="new-version-update.html"><i class="fas fa-sync"></i>New Version Update</a></li>
+                <li><a href="support.html"><i class="fas fa-headset"></i>Support</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <div class="content-header">
+                <h1>Progressive Web App (PWA) Setup</h1>
+            </div>
+            <div class="content-body">
+                <section id="pwa-introduction">
+                    <h2>Introduction to PWA</h2>
+                    <p>Progressive Web Applications (PWAs) combine the best features of web and mobile apps. They are installable on devices and provide an app-like experience while remaining accessible via web browsers.</p>
+                    <p>Setting up your eDemand application as a PWA enhances user experience by making your service available for installation on devices, providing a more integrated feel with the operating system.</p>
+                </section>
+
+                <section id="enable-pwa">
+                    <h2>Enabling PWA Functionality</h2>
+                    <p>To enable PWA functionality in your eDemand application, you need to modify the <code>.env</code> file:</p>
+                    
+                    <div class="step-container">
+                        <h3>Step 1: Update the .env File</h3>
+                        <p>In your .env file, locate the line with <code>NEXT_PUBLIC_PWA_ENABLED</code> and set its value to <code>"true"</code>:</p>
+                        <pre>NEXT_PUBLIC_PWA_ENABLED="true"</pre>
+                        <p>To disable PWA functionality, simply set this value to <code>"false"</code>.</p>
+                        <img src="static/img/web/pwa_env.png" alt="PWA Environment Variable" class="screenshot" />
+                    </div>
+                </section>
+
+                <section id="configure-manifest">
+                    <h2>Configuring the Web App Manifest</h2>
+                    <p>The web app manifest provides information about your application to the browser and controls how your app appears when installed on a user's device.</p>
+                    
+                    <div class="step-container">
+                        <h3>Step 2: Update the manifest.json File</h3>
+                        <p>Navigate to the <code>public</code> folder and open the <code>manifest.json</code> file. Update the following details to match your application:</p>
+                        <ul>
+                            <li><strong>name</strong>: The full name of your application</li>
+                            <li><strong>short_name</strong>: A shorter name for app icons</li>
+                            <li><strong>description</strong>: Brief description of your application</li>
+                            <li><strong>theme_color</strong>: Primary color theme of your application</li>
+                            <li><strong>background_color</strong>: Background color during app loading</li>
+                            <li><strong>start_url</strong>: URL that loads when app is launched from home screen</li>
+                            <li><strong>display</strong>: Preferred display mode (fullscreen, standalone, minimal-ui, browser)</li>
+                        </ul>
+                        <img src="static/img/web/manifest_update.png" alt="Manifest Update" class="screenshot" />
+                    </div>
+                </section>
+
+                <section id="pwa-icons">
+                    <h2>Setting Up PWA Icons</h2>
+                    <p>PWA requires various icon sizes for different devices and contexts. You need to create and place these icons in the <code>public</code> directory.</p>
+                    
+                    <div class="step-container">
+                        <h3>Step 3: Generate and Replace PWA Icons</h3>
+                        <p>You can convert your brand logo into all the required favicon and PWA icon formats using an online tool:</p>
+                        
+                        <div class="tip">
+                            <p><strong>Recommended Tool:</strong> <a href="https://favicon.io/favicon-converter/" target="_blank">https://favicon.io/favicon-converter/</a></p>
+                            <p>This tool will generate all the necessary icon files from your brand logo.</p>
+                        </div>
+                        
+                        <p>After generating the icons, replace the following files in your <code>public</code> folder with the newly generated ones:</p>
+                        <ul>
+                            <li><code>android-chrome-192x192.png</code></li>
+                            <li><code>android-chrome-512x512.png</code></li>
+                            <li><code>apple-touch-icon.png</code></li>
+                            <li><code>favicon-16x16.png</code></li>
+                            <li><code>favicon-32x32.png</code></li>
+                            <li><code>favicon.ico</code></li>
+                            <li><code>site.webmanifest</code> (if provided)</li>
+                        </ul>
+                        <p><strong>Important:</strong> Ensure that the file names remain exactly the same as listed above.</p>
+                        <img src="static/img/web/pwa_icons.png" alt="PWA Icons" class="screenshot" />
+                    </div>
+                </section>
+
+                <section id="testing-pwa">
+                    <h2>Testing Your PWA</h2>
+                    <p>After completing the setup, you should test your PWA to ensure everything works correctly:</p>
+                    <ol>
+                        <li>Build and deploy your application</li>
+                        <li>Open Chrome DevTools (F12) and navigate to the "Application" tab</li>
+                        <li>Under the "Application" panel, check "Manifest" to verify your manifest details are correctly loaded</li>
+                        <li>Check "Service Workers" to ensure your service worker is registered and running</li>
+                        <li>Use the "Lighthouse" tab to run a PWA audit that will verify all PWA requirements are met</li>
+                    </ol>
+                    <p>You should see an install prompt on compatible browsers when visiting your site, allowing users to add your application to their home screen.</p>
+                    <div class="tip">
+                        <p><strong>Tip:</strong> To test the installation feature, visit your site on a mobile device or use Chrome's mobile emulation mode, and look for the "Add to Home Screen" option.</p>
+                    </div>
+                </section>
+
+                <section id="pwa-benefits">
+                    <h2>Benefits of PWA for Your eDemand Application</h2>
+                    <ul>
+                        <li><strong>Installable</strong>: Users can add your app to their home screen without app store requirements</li>
+                        <li><strong>Responsive</strong>: Works on any device with a browser</li>
+                        <li><strong>App-like Experience</strong>: Provides a seamless, immersive user experience</li>
+                        <li><strong>Fresh Content</strong>: Always updated when online</li>
+                        <li><strong>Safe</strong>: Served via HTTPS to ensure content hasn't been tampered with</li>
+                        <li><strong>Discoverable</strong>: Identifiable as an "application" by search engines</li>
+                        <li><strong>Re-engageable</strong>: Can use push notifications to re-engage users</li>
+                        <li><strong>Linkable</strong>: Can be shared via URL without requiring installation</li>
+                    </ul>
+                    <div class="note">
+                        <p><strong>Note:</strong> While PWAs can provide some caching benefits, the eDemand application requires network connectivity to function properly as it relies on API calls to fetch data.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Section Links -->
+        <nav class="right-sidebar">
+            <div class="sidebar-header">
+                <h3>On this page</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#pwa-introduction">Introduction to PWA</a></li>
+                <li><a href="#enable-pwa">Enabling PWA Functionality</a></li>
+                <li><a href="#configure-manifest">Configuring the Web App Manifest</a></li>
+                <li><a href="#pwa-icons">Setting Up PWA Icons</a></li>
+                <li><a href="#testing-pwa">Testing Your PWA</a></li>
+                <li><a href="#pwa-benefits">Benefits of PWA</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html> 
